@@ -12,7 +12,7 @@ app.use(function (req, res, next){  //redirects https traffic to http
   }
 });
 
-app.use(express.static('public'));
+app.use(express.static('src'));
 
 app.listen(PORT, function () {
   console.log('Express server is up on port ' + PORT);

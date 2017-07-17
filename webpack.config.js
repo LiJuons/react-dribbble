@@ -1,11 +1,11 @@
 module.exports = {
-  entry: './public/app.jsx',
+  entry: './src/app.jsx',
   externals: {
     jquery: 'jQuery'
   },
   output: {
     path: __dirname,
-    filename: './public/bundle.js'
+    filename: './src/bundle.js'
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
