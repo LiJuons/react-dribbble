@@ -2,9 +2,12 @@
   "name": "react-dribbble",
   "version": "1.0.0",
   "description": "Dribbble clone app",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "babel src/ -d lib/",
+    "prepublish": "npm run build",
+    "flow": "flow"
   },
   "author": "Linas Jonas",
   "license": "MIT",
