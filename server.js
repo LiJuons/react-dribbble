@@ -1,5 +1,5 @@
 var express = require('express');
-
+const path = require('path');
 // Create our app
 var app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,7 +12,11 @@ app.use(function (req, res, next){  //redirects https traffic to http
   }
 });
 
-app.use(express.static('src'));
+app.use(express.static(__dirname+'/src'));
+
+app.get('*', function (request, response){
+  response.sendFile(path.resolve(__dirname, 'src', 'index.html'))
+})
 
 app.listen(PORT, function () {
   console.log('Express server is up on port ' + PORT);

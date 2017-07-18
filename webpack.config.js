@@ -20,5 +20,13 @@ module.exports = {
       exclude: /(node_modules|bower_components)/
     }]
   },
+  devServer: {
+    contentBase: 'app/ui/www',
+    devtool: 'eval',
+    hot: true,
+    inline: true,
+    port: 3000,
+    historyApiFallback: true
+  },
   devtool: 'inline-source-map'
 };
