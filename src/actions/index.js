@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 
-const ROOT_URL = 'https://dribbble-server-dev.herokuapp.com/create';
+const ROOT_URL = 'https://dribbble-server-dev.herokuapp.com';
 
 export function signinUser({ email, username, name, password }) {
   return function(dispatch) {
