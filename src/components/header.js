@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
 class Header extends Component {
+
   renderLinks() {
     if (this.props.authenticated){
       return <li className="nav-item">

@@ -3,7 +3,8 @@ import { browserHistory } from 'react-router';
 import {
   AUTH_USER,
   UNAUTH_USER,
-  AUTH_ERROR
+  AUTH_ERROR,
+  ERR_CLR
 } from './types';
 
 const ROOT_URL = 'https://dribbble-server-dev.herokuapp.com';
@@ -40,6 +41,10 @@ export function signoutUser() {
   localStorage.removeItem('token');
 
   return { type: UNAUTH_USER };
+}
+
+export function clearError(){
+  return { type: ERR_CLR };
 }
 
 export function authError(error) {

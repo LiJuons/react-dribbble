@@ -3,10 +3,11 @@ import { reduxForm } from 'redux-form';
 import * as actions from '../../actions';
 
 class Signup extends Component {
-  handleFormSubmit(formProps) {
-    // Call action creator to sign up the user!
-    this.props.signupUser(formProps);
+  componentWillMount() {
+    this.props.clearError();
   }
+
+  handleFormSubmit(formProps){ this.props.signupUser(formProps); }
 
   renderAlert() {
     if (this.props.errorMessage) {
