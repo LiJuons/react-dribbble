@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import reactBootstrapNavbar from 'react-bootstrap-navbar';
-import Radium from 'radium';
-
-const RadiumLink = Radium(Link);
 
 class Header extends Component {
 
@@ -33,7 +29,7 @@ class Header extends Component {
             <Link to="/" className="navbar-brand">
               <img alt="dribbble" style={styles.style_img} src={"http://www.underconsideration.com/brandnew/archives/dribbble_logo_detail.png"} />
             </Link>
-          <ul className="nav navbar-nav style" style={styles.style_l}>
+          <ul className="nav navbar-nav style_l" style={styles.style_l}>
             <li className="nav-item" key={3}>
               <Link className="nav-link" to="/shots"><p style={styles.style_link}>Shots</p></Link>
             </li>
@@ -54,8 +50,11 @@ class Header extends Component {
             </li>
           </ul>
         </div>
-          <ul className="nav navbar-nav navbar-right style" style={styles.style_r}>
+          <ul className="nav navbar-nav style_r" style={styles.style_r}>
             {this.renderLinks()}
+            <li className="nav-item" key={9}>
+              <input type="search" ref="city" placeholder="Search"/>
+            </li>
           </ul>
         </div>
       </nav>
@@ -74,7 +73,7 @@ export default connect(mapStateToProps)(Header);
 const styles = {
   style_r: {
     margin: 10,
-    top: 0,
+    top: 5,
     right: 17,
     bottom: 20,
     left: 'auto',
@@ -90,8 +89,6 @@ const styles = {
     left: 134,
     bottom: 20,
     position: 'fixed',
-    color: '#F5F5F5',
-    fontSize: 15,
   },
   style_img: {
     margin: 5,
