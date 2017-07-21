@@ -14,6 +14,8 @@ export function signinUser({ email, username, name, password }) {
 
     axios.post(`${ROOT_URL}/login`, { email, password })
       .then(response => {
+	dispatch({ type: AUTH_USER });
+	localStorage.setItem('token', response.data.token);
         browserHistory.push('/ok');
       })
       .catch((response) => {

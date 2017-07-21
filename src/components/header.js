@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+import reactBootstrapNavbar from 'react-bootstrap-navbar';
+import Radium from 'radium';
+
+const RadiumLink = Radium(Link);
 
 class Header extends Component {
 
   renderLinks() {
     if (this.props.authenticated){
       return <li className="nav-item">
-          <Link className="nav-link" to="/signout">Sign Out</Link>
+          <Link className="nav-link" to="/signout"><p style={styles.style_link}>Sign Out</p></Link>
         </li>
     } else {
       return [
         <li className="nav-item" key={1}>
-          <Link className="nav-link" to="/signin">Sign In</Link>
+          <Link className="nav-link" to="/signin"><p style={styles.style_link}>Sign In</p></Link>
         </li>,
         <li className="nav-item" key={2}>
-          <Link className="nav-link" to="/signup">Sign Up</Link>
+          <Link className="nav-link" to="/signup"><p style={styles.style_link}>Sign Up</p></Link>
         </li>
       ];
     }
@@ -23,11 +27,37 @@ class Header extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-light">
-        <Link to="/" className="navbar-brand">Dribbble Clone</Link>
-        <ul className="nav navbar-nav">
-          {this.renderLinks()}
-        </ul>
+      <nav className="navbar-light style" style={{ backgroundColor: '#333333' }}>
+        <div>
+          <div className="container-fluid">
+            <Link to="/" className="navbar-brand">
+              <img alt="dribbble" style={styles.style_img} src={"http://www.underconsideration.com/brandnew/archives/dribbble_logo_detail.png"} />
+            </Link>
+          <ul className="nav navbar-nav style" style={styles.style_l}>
+            <li className="nav-item" key={3}>
+              <Link className="nav-link" to="/shots"><p style={styles.style_link}>Shots</p></Link>
+            </li>
+            <li className="nav-item" key={4}>
+              <Link className="nav-link" to="/designers"><p style={styles.style_link}>Designers</p></Link>
+            </li>
+            <li className="nav-item" key={5}>
+              <Link className="nav-link" to="/blog"><p style={styles.style_link}>Blog</p></Link>
+            </li>
+            <li className="nav-item" key={6}>
+              <Link className="nav-link" to="/podcast"><p style={styles.style_link}>Podcast</p></Link>
+            </li>
+            <li className="nav-item" key={7}>
+              <Link className="nav-link" to="/meetups"><p style={styles.style_link}>Meetups</p></Link>
+            </li>
+            <li className="nav-item" key={8}>
+              <Link className="nav-link" to="/jobs"><p style={styles.style_link}>Jobs</p></Link>
+            </li>
+          </ul>
+        </div>
+          <ul className="nav navbar-nav navbar-right style" style={styles.style_r}>
+            {this.renderLinks()}
+          </ul>
+        </div>
       </nav>
     );
   }
@@ -40,3 +70,33 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(Header);
+
+const styles = {
+  style_r: {
+    margin: 10,
+    top: 0,
+    right: 17,
+    bottom: 20,
+    left: 'auto',
+    position: 'fixed',
+  },
+  style_link: {
+    color: '#F5F5F5',
+    fontSize: 15,
+  },
+  style_l: {
+    margin: 5,
+    top: 10,
+    left: 134,
+    bottom: 20,
+    position: 'fixed',
+    color: '#F5F5F5',
+    fontSize: 15,
+  },
+  style_img: {
+    margin: 5,
+    left: 10,
+    width: 100,
+    height: 42,
+  }
+};
