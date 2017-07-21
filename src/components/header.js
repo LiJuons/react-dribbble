@@ -48,11 +48,14 @@ class Header extends Component {
             <li className="nav-item" key={8}>
               <Link className="nav-link" to="/jobs"><p style={styles.style_link}>Jobs</p></Link>
             </li>
+            <li className="nav-item" key={9}>
+              <p className="nav-item"  style={styles.style_drop}>...</p>
+            </li>
           </ul>
         </div>
           <ul className="nav navbar-nav style_r" style={styles.style_r}>
             {this.renderLinks()}
-            <li className="nav-item" key={9}>
+            <li className="nav-item" key={10}>
               <input type="search" ref="city" placeholder="Search"/>
             </li>
           </ul>
@@ -82,6 +85,10 @@ const styles = {
   style_link: {
     color: '#F5F5F5',
     fontSize: 15,
+  },
+  style_drop: { 
+    color: '#F5F5F5',
+    fontSize: 32,
   },
   style_l: {
     margin: 5,
