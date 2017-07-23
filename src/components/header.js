@@ -23,15 +23,15 @@ class Header extends Component {
 
   render() {
     return (
-      <nav className="navbar-light style" style={{ backgroundColor: '#333333' }}>
+      <nav className="navbar-light" style={{ backgroundColor: '#333333' }}>
         <div>
           <div className="container-fluid">
             <Link to="/" className="navbar-brand">
               <img alt="dribbble" style={styles.style_img} src={"http://www.underconsideration.com/brandnew/archives/dribbble_logo_detail.png"} />
             </Link>
-          <ul className="nav navbar-nav style_l" style={styles.style_l}>
-            <li className="nav-item">
-              <p className="clr-red">Red Text</p>
+          <ul className="nav navbar-nav style_l">
+            <li className="nav-item clr-red">
+              <div className="clr-red">Red Text</div>
             </li>
             <li className="nav-item" key={3}>
               <Link className="nav-link" to="/shots"><p style={styles.style_link}>Shots</p></Link>

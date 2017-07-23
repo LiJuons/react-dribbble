@@ -1,5 +1,7 @@
 .clr-red {
-  color: 'red';
+  color: #F5F5F5;
+  font-size: 5;
+  margin: 20 20 20 20;
 }
 
 .style_r: {
@@ -12,7 +14,7 @@
 }
 
 .style_link: {
-  color: '#F5F5F5';
+  color: #F5F5F5;
   font-size: 15;
 }
 
@@ -21,7 +23,7 @@
   top: 10;
   left: 134;
   bottom: 20;
-  position: 'fixed';
+  position: fixed;
 }
 
 .style_img: {
