@@ -23,6 +23,12 @@ class Header extends Component {
   }
 
   render() {
+    const links = ['Shots', 'Designers', 'Blog', 'Podcast', 'Meetups', 'Jobs', '...'];
+    const listItems = links.map((link_name) =>
+      <li className="nav-item" key={link_name}>
+        <div className="nav-link"><DropDown name={link_name} /></div>
+      </li>
+    );
     return (
       <nav className="navbar-light" style={{ backgroundColor: '#333333' }}>
         <div>
@@ -31,27 +37,7 @@ class Header extends Component {
               <img alt="dribbble" style={styles.style_img} src={"http://www.underconsideration.com/brandnew/archives/dribbble_logo_detail.png"} />
             </Link>
           <ul className="nav navbar-nav" style={styles.style_l}>
-            <li className="nav-item" key={3}>
-              <Link className="nav-link" to="/shots"><p className="navs">Shots</p></Link>
-            </li>
-            <li className="nav-item" key={4}>
-              <Link className="nav-link" to="/designers"><p className="navs">Designers</p></Link>
-            </li>
-            <li className="nav-item" key={5}>
-              <Link className="nav-link" to="/blog"><p className="navs">Blog</p></Link>
-            </li>
-            <li className="nav-item" key={6}>
-              <Link className="nav-link" to="/podcast"><p className="navs">Podcast</p></Link>
-            </li>
-            <li className="nav-item" key={7}>
-              <Link className="nav-link" to="/meetups"><p className="navs">Meetups</p></Link>
-            </li>
-            <li className="nav-item" key={8}>
-              <Link className="nav-link" to="/jobs"><p className="navs">Jobs</p></Link>
-            </li>
-            <li className="nav-item" key={9}>
-              <div className="nav-link"><DropDown /></div>
-            </li>
+            {listItems}
           </ul>
         </div>
           <ul className="nav navbar-nav style_r" style={styles.style_r}>
@@ -96,7 +82,7 @@ const styles = {
     top: 10,
     left: 134,
     bottom: 20,
-    position: 'fixed',
+    position: 'absolute',
   },
   style_img: {
     margin: 5,

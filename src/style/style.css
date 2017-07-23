@@ -1,3 +1,7 @@
+nav ul li:hover > ul {
+    position: absolute;
+    display: block;
+}
 
 .style_r: {
   margin: 10px;
@@ -6,10 +10,6 @@
   bottom: 20px;
   left: 'auto';
   position: 'fixed';
-}
-
-p.navs {
-  color: #F5F5F5;
 }
 
 .style-link: {
