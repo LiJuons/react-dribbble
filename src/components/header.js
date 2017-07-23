@@ -30,6 +30,9 @@ class Header extends Component {
               <img alt="dribbble" style={styles.style_img} src={"http://www.underconsideration.com/brandnew/archives/dribbble_logo_detail.png"} />
             </Link>
           <ul className="nav navbar-nav style_l" style={styles.style_l}>
+            <li className="nav-item">
+              <p className="clr-red">Red Text</p>
+            </li>
             <li className="nav-item" key={3}>
               <Link className="nav-link" to="/shots"><p style={styles.style_link}>Shots</p></Link>
             </li>
@@ -86,7 +89,7 @@ const styles = {
     color: '#F5F5F5',
     fontSize: 15,
   },
-  style_drop: { 
+  style_drop: {
     color: '#F5F5F5',
     fontSize: 32,
   },
