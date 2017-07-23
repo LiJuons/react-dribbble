@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+import DropDown from './nav/dropDown'
 
 class Header extends Component {
 
@@ -49,7 +50,7 @@ class Header extends Component {
               <Link className="nav-link" to="/jobs"><p className="navs">Jobs</p></Link>
             </li>
             <li className="nav-item" key={9}>
-              <p className="nav-item"  style={styles.style_drop}>...</p>
+              <div className="nav-link"><DropDown /></div>
             </li>
           </ul>
         </div>

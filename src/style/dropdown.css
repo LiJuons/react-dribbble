@@ -22,5 +22,7 @@ ul.drop {
   border: #ababab solid 1px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
-  width: 10%;
+  width: 130px;
+  padding-left:0.4em;
+  font-size: 12pt;
 }

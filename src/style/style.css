@@ -18,10 +18,10 @@ p.navs {
 }
 
 .style_l: {
-  margin: 5;
-  top: 10;
-  left: 134;
-  bottom: 20;
+  margin: 5px;
+  top: 10px;
+  left: 134px;
+  bottom: 20px;
   position: 'fixed';
 }
 
