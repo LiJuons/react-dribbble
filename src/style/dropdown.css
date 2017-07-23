@@ -1,0 +1,26 @@
+.menu-enter {
+  max-height: 0px;
+  -webkit-transition: max-height 1s ease;
+  overflow: hidden; }
+
+.menu-enter.menu-enter-active {
+  height: auto;
+  max-height: 100px; }
+
+.menu-leave {
+  max-height: 100px;
+  -webkit-transition: max-height 1s ease; }
+
+.menu-leave.menu-leave-active {
+  overflow: hidden;
+  max-height: 0px; }
+
+ul.drop {
+  background-color: #333333;
+  color: #6D6D6D;
+  list-style-type: none;
+  border: #ababab solid 1px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  width: 10%;
+}

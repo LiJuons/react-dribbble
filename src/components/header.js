@@ -29,27 +29,24 @@ class Header extends Component {
             <Link to="/" className="navbar-brand">
               <img alt="dribbble" style={styles.style_img} src={"http://www.underconsideration.com/brandnew/archives/dribbble_logo_detail.png"} />
             </Link>
-          <ul className="nav navbar-nav style_l">
-            <li className="nav-item clr-red">
-              <div className="clr-red">Red Text</div>
-            </li>
+          <ul className="nav navbar-nav" style={styles.style_l}>
             <li className="nav-item" key={3}>
-              <Link className="nav-link" to="/shots"><p style={styles.style_link}>Shots</p></Link>
+              <Link className="nav-link" to="/shots"><p className="navs">Shots</p></Link>
             </li>
             <li className="nav-item" key={4}>
-              <Link className="nav-link" to="/designers"><p style={styles.style_link}>Designers</p></Link>
+              <Link className="nav-link" to="/designers"><p className="navs">Designers</p></Link>
             </li>
             <li className="nav-item" key={5}>
-              <Link className="nav-link" to="/blog"><p style={styles.style_link}>Blog</p></Link>
+              <Link className="nav-link" to="/blog"><p className="navs">Blog</p></Link>
             </li>
             <li className="nav-item" key={6}>
-              <Link className="nav-link" to="/podcast"><p style={styles.style_link}>Podcast</p></Link>
+              <Link className="nav-link" to="/podcast"><p className="navs">Podcast</p></Link>
             </li>
             <li className="nav-item" key={7}>
-              <Link className="nav-link" to="/meetups"><p style={styles.style_link}>Meetups</p></Link>
+              <Link className="nav-link" to="/meetups"><p className="navs">Meetups</p></Link>
             </li>
             <li className="nav-item" key={8}>
-              <Link className="nav-link" to="/jobs"><p style={styles.style_link}>Jobs</p></Link>
+              <Link className="nav-link" to="/jobs"><p className="navs">Jobs</p></Link>
             </li>
             <li className="nav-item" key={9}>
               <p className="nav-item"  style={styles.style_drop}>...</p>
