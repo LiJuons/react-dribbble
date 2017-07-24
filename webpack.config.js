@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './src/app.jsx',
+  entry: './src/index.js',
   externals: {
     jquery: 'jQuery'
   },
