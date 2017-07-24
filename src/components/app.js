@@ -9,9 +9,6 @@ export default class App extends Component {
         <Header />
         {this.props.children}
         <DropDown />
-        <div style={{ backgroundImage: 'url(../pics/elefant.jpg)', backgroundSize: '20px 20px' }}>
-          <p>hola</p>
-        </div>
       </div>
     );
   }

@@ -19,10 +19,24 @@ class DropDown extends React.Component {
     });
   }
 
+  onEnter () {
+    styles.drop_menu = {
+      color: '#F5F5F5',
+      fontSize: 15,
+    }
+  }
+
+  onLeave () {
+    styles.drop_menu = {
+      color: '#999',
+      fontSize: 15,
+    }
+  }
+
   render() {
     let menu;
     if(this.state.menuActive) {
-      menu = <div>
+      menu = <div  onMouseLeave = { this.toggleMenu } style={{ position: 'absolute', whiteSpace: 'nowrap', width: 'auto' }}>
                 <ul className="drop">
                   <li>First Item </li>
                   <li>Second Item </li>
@@ -34,9 +48,9 @@ class DropDown extends React.Component {
     }
     return (
       <div style={{ position: 'relative' }}>
-      <div id = "menu" style={{ position: 'absolute' }}>
-        <div style={{ color: '#F5F5F5' }} onMouseOver = { this.toggleMenu } onMouseLeave = { this.toggleMenu }>{this.props.name}</div>
-        <ReactCSSTransitionGroup transitionName = "menu" transitionEnterTimeout={1000} transitionLeaveTimeout={1000}>
+      <div id = "menu">
+        <div style={styles.drop_menu} onMouseEnter={ this.onEnter } onMouseOver = { this.toggleMenu } onMouseOut = { this.onLeave } onMouseLeave = { this.toggleMenu } >{this.props.name}</div>
+        <ReactCSSTransitionGroup transitionName = "menu" transitionEnterTimeout={20} transitionLeaveTimeout={20}>
           {menu}
         </ReactCSSTransitionGroup>
       </div>
@@ -46,3 +60,10 @@ class DropDown extends React.Component {
 }
 
 export default DropDown;
+
+const styles = {
+  drop_menu: {
+    color: '#999',
+    fontSize: 15,
+  }
+}

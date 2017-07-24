@@ -1,3 +1,8 @@
+nav {
+  height: 56px;
+  position: relative;
+}
+
 nav ul li:hover > ul {
     position: relative;
     display: block;
@@ -5,12 +10,6 @@ nav ul li:hover > ul {
 
 input.auth {
   width: 500px;
-}
-
-.screen {
-  background-image: url("../pics/search.png");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
 }
 
 input.search {
@@ -40,6 +39,14 @@ input.search::-webkit-input-placeholder {
     line-height: 3;
 }
 
+p.sub_label {
+  font-size: 12px;
+  color: #999;
+}
+
+.error {
+  color: red;
+}
 
 .style_r: {
   margin: 10px;
@@ -55,17 +62,13 @@ input.search::-webkit-input-placeholder {
   font-size: 15pt;
 }
 
-.style_l: {
-  margin: 5px;
+ul.style_l: {
   top: 10px;
-  left: 134px;
   bottom: 20px;
   position: 'relative';
 }
 
-.style_img: {
-  margin: 5px;
-  left: 10px;
-  width: 100px;
-  height: 42px;
+img.logo: {
+  top: 20px;
+  position: 'relative',
 }

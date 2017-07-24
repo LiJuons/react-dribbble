@@ -9,6 +9,11 @@ class Signup extends Component {
 
   handleFormSubmit(formProps){ this.props.signupUser(formProps); }
 
+  constructor(props) {
+    super(props);
+    this.state = {value: 'USERNAME'};
+  }
+
   renderAlert() {
     if (this.props.errorMessage) {
       return (
@@ -17,6 +22,10 @@ class Signup extends Component {
         </div>
       );
     }
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
   }
 
   render() {
@@ -33,12 +42,16 @@ class Signup extends Component {
         </fieldset>
         <fieldset className="form-group">
           <label>Username:</label>
-          <input className="form-control auth" {...username} />
+          <input type="text" className="form-control auth" {...username}
+            value={this.state.value} onChange={this.handleChange.bind(this)}
+            />
+          <p className="sub_label">Your Dribbble URL: https://dribbble.com/<strong style={{color:'#777'}}>{this.state.value}</strong></p>
           {username.touched && username.error && <div className="error">{username.error}</div>}
         </fieldset>
         <fieldset className="form-group">
           <label>Name:</label>
           <input className="form-control auth" {...name} />
+          <p className='sub_label'>We're big on real names around here, so people know who's who</p>
           {name.touched && name.error && <div className="error">{name.error}</div>}
         </fieldset>
         <fieldset className="form-group">

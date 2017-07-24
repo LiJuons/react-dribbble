@@ -3,6 +3,7 @@
   -webkit-transition: max-height;
   overflow: hidden;
   width: 100%;
+  z-index: 1;
 }
 
 .menu-enter.menu-enter-active {
