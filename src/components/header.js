@@ -25,8 +25,8 @@ class Header extends Component {
   render() {
     const links = ['Shots', 'Designers', 'Blog', 'Podcast', 'Meetups', 'Jobs', '...'];
     const listItems = links.map((link_name) =>
-      <li className="nav-item" key={link_name}>
-        <div className="nav-link"><DropDown name={link_name} /></div>
+      <li className="nav-item" key={link_name} style={{ position: 'relative' }}>
+        <div className="nav-link" style={{ position: 'relative' }}><DropDown style={{ position: 'relative' }} name={link_name} /></div>
       </li>
     );
     return (
@@ -36,14 +36,14 @@ class Header extends Component {
             <Link to="/" className="navbar-brand">
               <img alt="dribbble" style={styles.style_img} src={"http://www.underconsideration.com/brandnew/archives/dribbble_logo_detail.png"} />
             </Link>
-          <ul className="nav navbar-nav" style={styles.style_l}>
+          <ul className="nav navbar-nav">
             {listItems}
           </ul>
         </div>
           <ul className="nav navbar-nav style_r" style={styles.style_r}>
             {this.renderLinks()}
             <li className="nav-item" key={10}>
-              <input type="search" ref="city" placeholder="Search"/>
+              <input className="search" type="search" ref="city" placeholder="Search"/>
             </li>
           </ul>
         </div>
@@ -85,8 +85,7 @@ const styles = {
     position: 'absolute',
   },
   style_img: {
-    margin: 5,
-    left: 10,
+    position: 'relative',
     width: 100,
     height: 42,
   }

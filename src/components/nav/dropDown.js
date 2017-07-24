@@ -33,11 +33,13 @@ class DropDown extends React.Component {
       menu = "";
     }
     return (
-      <div id = "menu">
+      <div style={{ position: 'relative' }}>
+      <div id = "menu" style={{ position: 'absolute' }}>
         <div style={{ color: '#F5F5F5' }} onMouseOver = { this.toggleMenu } onMouseLeave = { this.toggleMenu }>{this.props.name}</div>
         <ReactCSSTransitionGroup transitionName = "menu" transitionEnterTimeout={1000} transitionLeaveTimeout={1000}>
           {menu}
         </ReactCSSTransitionGroup>
+      </div>
       </div>
     )
   }

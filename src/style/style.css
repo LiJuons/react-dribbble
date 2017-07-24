@@ -1,7 +1,45 @@
 nav ul li:hover > ul {
-    position: absolute;
+    position: relative;
     display: block;
 }
+
+input.auth {
+  width: 500px;
+}
+
+.screen {
+  background-image: url("../pics/search.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+input.search {
+  width: 220px;
+  height: 25px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: none;
+  top: 5px;
+  position: relative;
+  font-size: 12px;
+  line-height: 1.5;
+  background-image: url("../pics/search.png");
+  background-position: 5px;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  text-indent: 24px;
+}
+
+input.search:not(:focus) {
+  color: #adadad;
+}
+
+input.search::-webkit-input-placeholder {
+    color: #adadad;
+    font-size: 12px;
+    line-height: 3;
+}
+
 
 .style_r: {
   margin: 10px;
@@ -9,7 +47,7 @@ nav ul li:hover > ul {
   right: 17px;
   bottom: 20px;
   left: 'auto';
-  position: 'fixed';
+  position: 'relative';
 }
 
 .style-link: {
@@ -22,7 +60,7 @@ nav ul li:hover > ul {
   top: 10px;
   left: 134px;
   bottom: 20px;
-  position: 'fixed';
+  position: 'relative';
 }
 
 .style_img: {
