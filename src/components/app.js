@@ -1,15 +1,31 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Header from './header';
-import DropDown from './nav/dropDown'
 
-export default class App extends Component {
+class App extends Component {
   render() {
-    return (
-      <div>
-        <Header />
-        {this.props.children}
-        <DropDown />
-      </div>
-    );
+    console.log(this.props.header);
+    if (this.props.header) {
+      return (
+        <div>
+          <Header />
+          {this.props.children}
+        </div>
+      );
+    } else {
+      return (
+        <div className="signin">
+          {this.props.children}
+        </div>
+      );
+    }
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    header: state.hdr.header
+  };
+}
+
+export default connect(mapStateToProps)(App);

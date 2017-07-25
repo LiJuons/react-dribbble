@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
+import { Link } from 'react-router';
 import * as actions from '../../actions';
 
 class Signin extends Component {
   componentWillMount() {
     this.props.clearError();
+    this.props.headerOff();
+  }
+
+  componentWillUnmount() {
+    this.props.headerOn();
   }
 
   handleFormSubmit({ email, password }){ this.props.signinUser({ email, password }); }
@@ -23,20 +29,23 @@ class Signin extends Component {
     const { handleSubmit, fields: { email, password }} = this.props;
 
     return (
-      <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-        <fieldset className="form-group">
-          <label>Email</label>
-          <input {...email} className="form-control auth"/ >
-          {email.touched && email.error && <div className="error">{email.error}</div>}
-        </fieldset>
-        <fieldset className="form-group">
-          <label>Password</label>
-          <input type="password" {...password} className="form-control auth"/ >
-          {password.touched && password.error && <div className="error">{password.error}</div>}
-        </fieldset>
-        {this.renderAlert()}
-        <button action="submit" className="btn btn-primary">Sign in</button>
-      </form>
+      <div>
+        <form className="signin" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+          <fieldset className="form-group">
+            <label className="signin">Username or Email</label>
+            <input {...email} className="form-control auth"/ >
+            {email.touched && email.error && <div className="error">{email.error}</div>}
+          </fieldset>
+          <fieldset className="form-group">
+            <label className="signin">Password <Link to='/forgot'><p className="signin">Forgot?</p></Link></label>
+            <input type="password" {...password} className="form-control auth"/ >
+            {password.touched && password.error && <div className="error">{password.error}</div>}
+          </fieldset>
+          {this.renderAlert()}
+          <button action="submit" className="btn btn-primary signin">Sign in</button>
+          <div className="signUp">Not a member? <Link to="/signup"><p className="signin">Sign Up Now</p></Link></div>
+        </form>
+      </div>
     );
   }
 }

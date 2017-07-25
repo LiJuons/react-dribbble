@@ -1,3 +1,36 @@
+div.signin {
+  background-color: #333333;
+  background-size: cover;
+  min-height: 650px;
+}
+
+div.signUp {
+  position: relative;
+  left: 450px;
+  color: #999;
+}
+
+form.signin {
+  position: relative;
+  top: 150px;
+  left: 40px;
+}
+
+button.signin {
+  background-color: #EB4B88;
+  border-color: #EB4B88;
+}
+
+label.signin {
+  color: #ffffff;
+}
+
+p.signin {
+  color: #999;
+  text-decoration: underline;
+  display: inline-block;
+}
+
 nav {
   height: 56px;
   position: relative;

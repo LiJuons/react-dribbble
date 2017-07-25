@@ -4,7 +4,9 @@ import {
   AUTH_USER,
   UNAUTH_USER,
   AUTH_ERROR,
-  ERR_CLR
+  ERR_CLR,
+  HDR_OFF,
+  HDR_ON
 } from './types';
 
 const ROOT_URL = 'https://dribbble-server-dev.herokuapp.com';
@@ -54,4 +56,12 @@ export function authError(error) {
     type: AUTH_ERROR,
     payload: error
   }
+}
+
+export function headerOff() {
+  return { type: HDR_OFF };
+}
+
+export function headerOn() {
+  return { type: HDR_ON };
 }
