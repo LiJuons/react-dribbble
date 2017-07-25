@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import * as actions from '../../actions';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 class Signup extends Component {
   componentWillMount() {
@@ -11,7 +12,7 @@ class Signup extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {value: 'USERNAME'};
+    this.state = {value: ''};
   }
 
   renderAlert() {
@@ -26,6 +27,21 @@ class Signup extends Component {
 
   handleChange(event) {
     this.setState({value: event.target.value});
+  }
+
+  unameValue() {
+    if (this.state.value) {
+      return <strong style={{color:'#777'}}>{this.state.value}</strong>
+    } else {
+      return <strong style={{color:'#777'}}>USERNAME</strong>
+    }
+  }
+
+  onChange(response) {
+    console.log("Captcha value:", value);
+    this.setState({
+      'g-recaptcha-response': response
+    });
   }
 
   render() {
@@ -45,7 +61,9 @@ class Signup extends Component {
           <input type="text" className="form-control auth" {...username}
             value={this.state.value} onChange={this.handleChange.bind(this)}
             />
-          <p className="sub_label">Your Dribbble URL: https://dribbble.com/<strong style={{color:'#777'}}>{this.state.value}</strong></p>
+          <p className="sub_label">Your Dribbble URL: https://dribbble.com/
+            {this.unameValue()}
+          </p>
           {username.touched && username.error && <div className="error">{username.error}</div>}
         </fieldset>
         <fieldset className="form-group">
@@ -64,6 +82,11 @@ class Signup extends Component {
           <input type="password" className="form-control auth" {...passwordConfirm} />
           {passwordConfirm.touched && passwordConfirm.error && <div className="error">{passwordConfirm.error}</div>}
         </fieldset>
+        <ReCAPTCHA
+          ref="recaptcha"
+          sitekey="6Le0bCoUAAAAAMnfIWvY2b8w0Z932kI6Iu_zu3p9"
+          onChange={this.onChange.bind(this)}
+        />
         {this.renderAlert()}
         <button action="submit" className="btn btn-primary">Create Account</button>
       </form>
