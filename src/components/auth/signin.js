@@ -30,6 +30,7 @@ class Signin extends Component {
 
     return (
       <div>
+        <img alt="Dribbble" src="https://cdn.dribbble.com/assets/signin/logo-hd-8360fbb4811d72778c637954850f3c3f0edc188a0b5e1db7041d2f4bb194dd49.png" />
         <form className="signin" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
           <fieldset className="form-group">
             <label className="signin">Username or Email</label>
@@ -45,6 +46,7 @@ class Signin extends Component {
           <button action="submit" className="btn btn-primary signin">Sign in</button>
           <div className="signUp">Not a member? <Link to="/signup"><p className="signin">Sign Up Now</p></Link></div>
         </form>
+        <hr className="vertical"/>
       </div>
     );
   }

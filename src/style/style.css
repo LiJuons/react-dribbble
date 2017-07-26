@@ -1,7 +1,15 @@
+hr.vertical
+{
+  color: #FFFFFF;
+   width: 2px;
+   height: 100%; /* or height in PX */
+}
+
 div.signin {
   background-color: #333333;
   background-size: cover;
   min-height: 650px;
+  max-width: 1400px;
 }
 
 div.signUp {
@@ -12,8 +20,8 @@ div.signUp {
 
 form.signin {
   position: relative;
-  top: 150px;
-  left: 40px;
+  top: 170px;
+  left: 380px;
 }
 
 button.signin {
@@ -42,7 +50,8 @@ nav ul li:hover > ul {
 }
 
 input.auth {
-  width: 500px;
+  width: 270px;
+  background: #FFFFFF;
 }
 
 input.search {
