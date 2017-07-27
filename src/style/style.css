@@ -1,3 +1,18 @@
+div.signinTitle {
+  color: #999;
+  top: 110px;
+  left:47%;
+  position: absolute;
+  font-size: 23pt;
+}
+
+img.signin {
+  width: 200px;
+  height: 49px;
+  position: relative;
+  top: 59px;
+}
+
 hr.vertical
 {
   color: #FFFFFF;
@@ -5,23 +20,19 @@ hr.vertical
    height: 100%; /* or height in PX */
 }
 
-div.signin {
-  background-color: #333333;
-  background-size: cover;
-  min-height: 650px;
-  max-width: 1400px;
-}
-
-div.signUp {
+div.signinup {
+  display: block;
   position: relative;
-  left: 450px;
+  left: 190px;
+  top: 20px;
   color: #999;
 }
 
 form.signin {
-  position: relative;
-  top: 170px;
+  position: absolute;
+  top: 160px;
   left: 380px;
+  width: 500px;
 }
 
 button.signin {
@@ -30,13 +41,18 @@ button.signin {
 }
 
 label.signin {
-  color: #ffffff;
+  color: #cccccc;
+  font-size: 11pt;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 p.signin {
   color: #999;
   text-decoration: underline;
   display: inline-block;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 nav {
@@ -52,6 +68,10 @@ nav ul li:hover > ul {
 input.auth {
   width: 270px;
   background: #FFFFFF;
+}
+
+input.auth:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
 input.search {

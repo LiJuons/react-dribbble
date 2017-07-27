@@ -11,7 +11,7 @@ import {
 
 const ROOT_URL = 'https://dribbble-server-dev.herokuapp.com';
 
-export function signinUser({ email, username, name, password }) {
+export function signinUser({ email, password }) {
   return function(dispatch) {
 
     axios.post(`${ROOT_URL}/login`, { email, password })

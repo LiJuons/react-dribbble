@@ -14,7 +14,7 @@ class App extends Component {
       );
     } else {
       return (
-        <div className="signin">
+        <div>
           {this.props.children}
         </div>
       );

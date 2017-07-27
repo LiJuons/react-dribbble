@@ -5,11 +5,13 @@ import * as actions from '../../actions';
 
 class Signin extends Component {
   componentWillMount() {
+    document.body.style.backgroundColor = "#333333";
     this.props.clearError();
     this.props.headerOff();
   }
 
   componentWillUnmount() {
+    document.body.style.backgroundColor = null;
     this.props.headerOn();
   }
 
@@ -30,11 +32,14 @@ class Signin extends Component {
 
     return (
       <div>
-        <img alt="Dribbble" src="https://cdn.dribbble.com/assets/signin/logo-hd-8360fbb4811d72778c637954850f3c3f0edc188a0b5e1db7041d2f4bb194dd49.png" />
+        <Link to="/">
+          <img alt="Dribbble" className="center-block signin" src="https://cdn.dribbble.com/assets/signin/logo-hd-8360fbb4811d72778c637954850f3c3f0edc188a0b5e1db7041d2f4bb194dd49.png" />
+        </Link>
+        <div className="text-center signinTitle">Sign in</div>
         <form className="signin" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
           <fieldset className="form-group">
             <label className="signin">Username or Email</label>
-            <input {...email} className="form-control auth"/ >
+            <input  {...email} className="form-control auth"/ >
             {email.touched && email.error && <div className="error">{email.error}</div>}
           </fieldset>
           <fieldset className="form-group">
@@ -44,7 +49,7 @@ class Signin extends Component {
           </fieldset>
           {this.renderAlert()}
           <button action="submit" className="btn btn-primary signin">Sign in</button>
-          <div className="signUp">Not a member? <Link to="/signup"><p className="signin">Sign Up Now</p></Link></div>
+          <div className="center-block signinup">Not a member? <Link to="/signup"><p className="signin">Sign Up Now</p></Link></div>
         </form>
         <hr className="vertical"/>
       </div>
