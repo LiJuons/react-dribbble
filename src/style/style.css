@@ -3,7 +3,35 @@ div.signinTitle {
   top: 110px;
   left:47%;
   position: absolute;
-  font-size: 23pt;
+  font-size: 22pt;
+}
+
+p.blw-twitter {
+  position: fixed;
+  left: 52%;
+  top: 220px;
+  margin: 1.5em 0 0 0;
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #999;
+}
+
+a.auth-twitter {
+    display: inline-block;
+    margin: 0 0 15px 0;
+    padding: 6px 12px 6px 40px;
+    font-size: 1.2em;
+    font-weight: normal;
+    text-decoration: none;
+    color: rgba(255,255,255,0.9);
+    border: none;
+    background: url(https://qph.ec.quoracdn.net/main-qimg-fdc49f7891d0daa00843ccc6dd215a66) no-repeat 15px 50%;
+    background-size: 20px 16px, auto auto;
+    background-color: #1d88b4;
+    border-radius: 4px;
+    position: absolute;
+    left: 52%;
+    top: 120px;
 }
 
 img.signin {
@@ -15,9 +43,14 @@ img.signin {
 
 hr.vertical
 {
-  color: #FFFFFF;
-   width: 2px;
-   height: 100%; /* or height in PX */
+  transform: rotate(-90deg);
+  border: none;
+  width: 13%;
+  color: #999;
+  background-color: #555;
+  height: 0.8px;
+  position: relative;
+  top: 190px;
 }
 
 div.signinup {

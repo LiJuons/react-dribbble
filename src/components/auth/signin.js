@@ -51,7 +51,15 @@ class Signin extends Component {
           <button action="submit" className="btn btn-primary signin">Sign in</button>
           <div className="center-block signinup">Not a member? <Link to="/signup"><p className="signin">Sign Up Now</p></Link></div>
         </form>
-        <hr className="vertical"/>
+        <div style={{ position: 'relative' }}>
+          <hr className="vertical"/>
+          <a className="auth-twitter" href="https://dribbble.com/auth/Twitter"> Sign in with Twitter</a>
+          <p className="blw-twitter">
+            One-click sign in to Dribbble if your account is<br/>
+            connected to Twitter. We’ll walk you through<br/>
+            connecting it if it isn’t.<br/>
+          </p>
+        </div>
       </div>
     );
   }
