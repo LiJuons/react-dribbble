@@ -1,9 +1,40 @@
+div.loginContainer {
+  position: fixed;
+  top: 0px;
+}
+
+div.errorContainer {
+
+}
+
 div.signinTitle {
   color: #999;
   top: 110px;
   left:47%;
-  position: absolute;
+  position: fixed;
   font-size: 22pt;
+}
+
+div.error {
+  background-color: #f55;
+}
+
+div.notice {
+  padding: 15px;
+  font-size: .9em;
+  font-weight: normal;
+  text-align: center;
+  color: #fff;
+  background: #f55;
+}
+
+h2.notice {
+  max-width: 940px;
+  margin: 0 auto;
+  font-size: 1.3em;
+  font-weight: normal;
+  line-height: 1.3;
+  text-align: center;
 }
 
 p.blw-twitter {
@@ -29,16 +60,17 @@ a.auth-twitter {
     background-size: 20px 16px, auto auto;
     background-color: #1d88b4;
     border-radius: 4px;
-    position: absolute;
+    position: fixed;
     left: 52%;
-    top: 120px;
+    top: 185px;
 }
 
 img.signin {
   width: 200px;
   height: 49px;
-  position: relative;
+  position: fixed;
   top: 59px;
+  left: 580px;
 }
 
 hr.vertical
@@ -48,9 +80,10 @@ hr.vertical
   width: 13%;
   color: #999;
   background-color: #555;
-  height: 0.8px;
-  position: relative;
-  top: 190px;
+  height: 0.5px;
+  position: fixed;
+  top: 240px;
+  left: 594px;
 }
 
 div.signinup {
@@ -69,8 +102,15 @@ form.signin {
 }
 
 button.signin {
-  background-color: #EB4B88;
-  border-color: #EB4B88;
+  display: block;
+  font: normal 16px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #ea4c88;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 12px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
 }
 
 label.signin {
