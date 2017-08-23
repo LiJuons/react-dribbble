@@ -50,7 +50,7 @@ class DropDown extends React.Component {
       <div style={{ position: 'relative' }}>
       <div id = "menu">
         <div style={styles.drop_menu} onMouseEnter={ this.onEnter } onMouseOver = { this.toggleMenu } onMouseOut = { this.onLeave } onMouseLeave = { this.toggleMenu } >{this.props.name}</div>
-        <ReactCSSTransitionGroup transitionName = "menu" transitionEnterTimeout={20} transitionLeaveTimeout={20}>
+        <ReactCSSTransitionGroup transitionName = "menu" transitionEnterTimeout={20} transitionLeaveTimeout={100}>
           {menu}
         </ReactCSSTransitionGroup>
       </div>

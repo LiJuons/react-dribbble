@@ -9,9 +9,9 @@ div.errorContainer {
 
 div.signinTitle {
   color: #999;
-  top: 110px;
+  /*top: 110px;
   left:47%;
-  position: fixed;
+  position: fixed;*/
   font-size: 22pt;
 }
 
@@ -68,9 +68,9 @@ a.auth-twitter {
 img.signin {
   width: 200px;
   height: 49px;
-  position: fixed;
+  /*position: fixed;
+  left: 580px;*/
   top: 59px;
-  left: 580px;
 }
 
 hr.vertical

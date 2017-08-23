@@ -35,11 +35,12 @@ class Signin extends Component {
         <div className="errorContainer">
           {this.renderAlert()}
         </div>
-        <div className="loginContainer">
+        <div className="container-fluid">
           <Link to="/">
             <img alt="Dribbble" className="center-block signin" src="https://cdn.dribbble.com/assets/signin/logo-hd-8360fbb4811d72778c637954850f3c3f0edc188a0b5e1db7041d2f4bb194dd49.png" />
           </Link>
-          <div className="text-center signinTitle">Sign in</div>
+          <div className="col-6"> </div>
+          <div className="signinTitle text-center">Sign in</div>
           <form className="signin" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
             <fieldset className="form-group">
               <label className="signin">Username or Email</label>
