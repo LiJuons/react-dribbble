@@ -1,0 +1,209 @@
+div.loginContainer {
+  position: fixed;
+  top: 0px;
+}
+
+div.errorContainer {
+
+}
+
+div.signinTitle {
+  color: #999;
+  /*top: 110px;
+  left:47%;
+  position: fixed;*/
+  font-size: 22pt;
+}
+
+div.error {
+  background-color: #f55;
+}
+
+div.notice {
+  padding: 15px;
+  font-size: .9em;
+  font-weight: normal;
+  text-align: center;
+  color: #fff;
+  background: #f55;
+}
+
+h2.notice {
+  max-width: 940px;
+  margin: 0 auto;
+  font-size: 1.3em;
+  font-weight: normal;
+  line-height: 1.3;
+  text-align: center;
+}
+
+p.blw-twitter {
+  position: fixed;
+  left: 52%;
+  top: 220px;
+  margin: 1.5em 0 0 0;
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #999;
+}
+
+a.auth-twitter {
+    display: inline-block;
+    margin: 0 0 15px 0;
+    padding: 6px 12px 6px 40px;
+    font-size: 1.2em;
+    font-weight: normal;
+    text-decoration: none;
+    color: rgba(255,255,255,0.9);
+    border: none;
+    background: url(https://qph.ec.quoracdn.net/main-qimg-fdc49f7891d0daa00843ccc6dd215a66) no-repeat 15px 50%;
+    background-size: 20px 16px, auto auto;
+    background-color: #1d88b4;
+    border-radius: 4px;
+    position: fixed;
+    left: 52%;
+    top: 185px;
+}
+
+img.signin {
+  width: 200px;
+  height: 49px;
+  /*position: fixed;
+  left: 580px;*/
+  top: 59px;
+}
+
+hr.vertical
+{
+  transform: rotate(-90deg);
+  border: none;
+  width: 13%;
+  color: #999;
+  background-color: #555;
+  height: 0.5px;
+  position: fixed;
+  top: 240px;
+  left: 594px;
+}
+
+div.signinup {
+  display: block;
+  position: relative;
+  left: 190px;
+  top: 20px;
+  color: #999;
+}
+
+form.signin {
+  position: absolute;
+  top: 160px;
+  left: 380px;
+  width: 500px;
+}
+
+button.signin {
+  display: block;
+  font: normal 16px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #ea4c88;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 12px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+label.signin {
+  color: #cccccc;
+  font-size: 11pt;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+p.signin {
+  color: #999;
+  text-decoration: underline;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+nav {
+  height: 56px;
+  position: relative;
+}
+
+nav ul li:hover > ul {
+    position: relative;
+    display: block;
+}
+
+input.auth {
+  width: 270px;
+  background: #FFFFFF;
+}
+
+input.auth:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input.search {
+  width: 220px;
+  height: 25px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: none;
+  top: 5px;
+  position: relative;
+  font-size: 12px;
+  line-height: 1.5;
+  background-image: url("../pics/search.png");
+  background-position: 5px;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  text-indent: 24px;
+}
+
+input.search:not(:focus) {
+  color: #adadad;
+}
+
+input.search::-webkit-input-placeholder {
+    color: #adadad;
+    font-size: 12px;
+    line-height: 3;
+}
+
+p.sub_label {
+  font-size: 12px;
+  color: #999;
+}
+
+.error {
+  color: red;
+}
+
+.style_r: {
+  margin: 10px;
+  top: 0px;
+  right: 17px;
+  bottom: 20px;
+  left: 'auto';
+  position: 'relative';
+}
+
+.style-link: {
+  color: #F5F5F5;
+  font-size: 15pt;
+}
+
+ul.style_l: {
+  top: 10px;
+  bottom: 20px;
+  position: 'relative';
+}
+
+img.logo: {
+  top: 20px;
+  position: 'relative',
+}

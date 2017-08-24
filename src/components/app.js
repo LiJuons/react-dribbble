@@ -1,13 +1,31 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Header from './header';
 
-export default class App extends Component {
+class App extends Component {
   render() {
-    return (
-      <div>
-        <Header />
-        {this.props.children}
-      </div>
-    );
+    console.log(this.props.header);
+    if (this.props.header) {
+      return (
+        <div>
+          <Header />
+          {this.props.children}
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          {this.props.children}
+        </div>
+      );
+    }
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    header: state.hdr.header
+  };
+}
+
+export default connect(mapStateToProps)(App);
