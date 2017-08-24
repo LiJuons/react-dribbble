@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Header from './header';
 
+// This should be done with the router
 class App extends Component {
   render() {
     console.log(this.props.header);

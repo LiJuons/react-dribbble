@@ -25,15 +25,16 @@ class Signup extends Component {
     }
   }
 
+  // handleChange({ target.value }) && extract value  
   handleChange(event) {
     this.setState({value: event.target.value});
   }
 
   unameValue() {
     if (this.state.value) {
-      return <strong style={{color:'#777'}}>{this.state.value}</strong>
+      return <strong style={{color:'#777'}}>{this.state.value}</strong> // styled component 
     } else {
-      return <strong style={{color:'#777'}}>USERNAME</strong>
+      return <strong style={{color:'#777'}}>USERNAME</strong> // styled component 
     }
   }
 
@@ -44,13 +45,14 @@ class Signup extends Component {
     });
   }
 
+  // would suggest if possible to split all form fieldsets to seperate component - IF possible 
   render() {
     const {
       handleSubmit,
       fields: { email, username, name, password, passwordConfirm }
     } = this.props;
     return (
-      <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+      <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}> // es6 binding with arrow functions
         <fieldset className="form-group">
           <label>Email:</label>
           <input className="form-control auth" {...email} />
@@ -59,7 +61,7 @@ class Signup extends Component {
         <fieldset className="form-group">
           <label>Username:</label>
           <input type="text" className="form-control auth" {...username}
-            value={this.state.value} onChange={this.handleChange.bind(this)}
+            value={this.state.value} onChange={this.handleChange.bind(this)} // es6 binding with arrow functions
             />
           <p className="sub_label">Your Dribbble URL: https://dribbble.com/
             {this.unameValue()}
@@ -84,8 +86,8 @@ class Signup extends Component {
         </fieldset>
         <ReCAPTCHA
           ref="recaptcha"
-          sitekey="6Le0bCoUAAAAAMnfIWvY2b8w0Z932kI6Iu_zu3p9"
-          onChange={this.onChange.bind(this)}
+          sitekey="6Le0bCoUAAAAAMnfIWvY2b8w0Z932kI6Iu_zu3p9" // make a .env file and do not expose this info
+          onChange={this.onChange.bind(this)} // es6 binding with arrow functions
         />
         {this.renderAlert()}
         <button action="submit" className="btn btn-primary">Create Account</button>
@@ -97,6 +99,7 @@ class Signup extends Component {
 function validate(formProps) {
   const errors = {};
 
+  // Maybe a lot with all the values from a json file
   if (!formProps.email) {
     errors.email = 'Please enter an email';
   }
