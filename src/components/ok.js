@@ -7,7 +7,8 @@ export default class Ok extends Component {
       return (
         <Grid>
           <Row>
-            <Col xs={6} md={3}>Hello, world!</Col>
+            <Col xs={6} md={4}>Hola</Col>
+            <Col xs={6} md={4}>Hello, world!</Col>
           </Row>
         </Grid>
       );

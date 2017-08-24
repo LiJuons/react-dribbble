@@ -1,8 +1,7 @@
 module.exports = {
   entry: './src/index.js',
   externals: {
-    jquery: 'jQuery',
-    //'prop-types': 'prop-types'
+    jquery: 'jQuery'
   },
   output: {
     path: __dirname,
