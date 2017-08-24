@@ -24,6 +24,7 @@
     "bootstrap": "^3.3.7",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
+    "classnames": "^2.2.5",
     "css-loader": "^0.28.5",
     "eslint": "^4.2.0",
     "flow-bin": "^0.50.0",
@@ -40,10 +41,13 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
+    "antd": "^2.12.7",
     "axios": "^0.16.2",
     "babel-preset-stage-1": "^6.1.18",
     "express": "^4.15.3",
+    "flexboxgrid": "^6.3.1",
     "lodash": "^3.10.1",
+    "prop-types": "^15.5.10",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-flexbox-grid": "^1.1.4",
