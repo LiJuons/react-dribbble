@@ -48,7 +48,7 @@ class Header extends Component {
         <div>
           <div className="container-fluid">
             <Link to="/" className="navbar-brand">
-              <img alt="dribbble" style={styles.logo} className="logo" src={"http://www.underconsideration.com/brandnew/archives/dribbble_logo_detail.png"} />
+              <img alt="dribbble" style={styles.logo} className="logo" src={"../pics/dribbble_logo.png"} />
             </Link>
           <ul className="nav navbar-nav style_l" style={styles.style_l}>
             {listItems}

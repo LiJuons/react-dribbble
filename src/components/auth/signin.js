@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import { Link } from 'react-router';
 import * as actions from '../../actions';
+import {Grid, Row, Col} from 'react-flexbox-grid';
 
 class Signin extends Component {
   componentWillMount() {
@@ -31,7 +32,7 @@ class Signin extends Component {
     const { handleSubmit, fields: { email, password }} = this.props;
 
     return (
-      <div>
+      <Grid>
         <div className="errorContainer">
           {this.renderAlert()}
         </div>
@@ -40,7 +41,10 @@ class Signin extends Component {
             <img alt="Dribbble" className="center-block signin" src="https://cdn.dribbble.com/assets/signin/logo-hd-8360fbb4811d72778c637954850f3c3f0edc188a0b5e1db7041d2f4bb194dd49.png" />
           </Link>
           <div className="col-6"> </div>
-          <div className="signinTitle text-center">Sign in</div>
+          <Row>
+            <Col xs={6} md={4} style={{ color: 'white' }}>Sign in</Col>
+          </Row>
+        <div className="signinTitle text-center">Sign in</div>
           <form className="signin" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
             <fieldset className="form-group">
               <label className="signin">Username or Email</label>
@@ -65,7 +69,7 @@ class Signin extends Component {
             </p>
           </div>
         </div>
-      </div>
+      </Grid>
     );
   }
 }
