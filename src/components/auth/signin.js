@@ -40,34 +40,44 @@ class Signin extends Component {
           <Link to="/">
             <img alt="Dribbble" className="center-block signin" src="https://cdn.dribbble.com/assets/signin/logo-hd-8360fbb4811d72778c637954850f3c3f0edc188a0b5e1db7041d2f4bb194dd49.png" />
           </Link>
-          <div className="col-6"> </div>
-          <Row>
-            <Col xs={6} md={4} style={{ color: 'white' }}>Sign in</Col>
+          <Row center="xs">
+            <Col xs={6} className="signinTitle">Sign In</Col>
           </Row>
-        <div className="signinTitle text-center">Sign in</div>
-          <form className="signin" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-            <fieldset className="form-group">
-              <label className="signin">Username or Email</label>
-              <input  {...email} className="form-control auth"/ >
-              {email.touched && email.error && <div className="error">{email.error}</div>}
-            </fieldset>
-            <fieldset className="form-group">
-              <label className="signin">Password <Link to='/forgot'><p className="signin">Forgot?</p></Link></label>
-              <input type="password" {...password} className="form-control auth"/ >
-              {password.touched && password.error && <div className="error">{password.error}</div>}
-            </fieldset>
-            <button action="submit" className="signin">Sign in</button>
-            <div className="center-block signinup">Not a member? <Link to="/signup"><p className="signin">Sign Up Now</p></Link></div>
-          </form>
-          <div style={{ position: 'relative' }}>
-            <hr className="vertical"/>
-            <a className="auth-twitter" href="https://dribbble.com/auth/Twitter"> Sign in with Twitter</a>
-            <p className="blw-twitter">
-              One-click sign in to Dribbble if your account is<br/>
-              connected to Twitter. We’ll walk you through<br/>
-              connecting it if it isn’t.<br/>
-            </p>
-          </div>
+          <Row>
+            <Col xs={6}>
+              <Row end="xs">
+                <Col xs={7}>
+                  <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+                    <fieldset className="form-group">
+                      <label className="signin">Username or Email</label>
+                      <input  {...email} className="form-control auth"/ >
+                      {email.touched && email.error && <div className="error">{email.error}</div>}
+                    </fieldset>
+                    <fieldset className="form-group">
+                      <label className="signin">Password <Link to='/forgot'><p className="signinForgot">Forgot?</p></Link></label>
+                      <input type="password" {...password} className="form-control auth"/ >
+                      {password.touched && password.error && <div className="error">{password.error}</div>}
+                    </fieldset>
+                    <button action="submit" className="signin">Sign in</button>
+                    <div className="center-block signinup">Not a member? <Link to="/signup"><p className="signin">Sign Up Now</p></Link></div>
+                  </form>
+                </Col>
+              </Row>
+            </Col>
+            <Col xs={6}>
+              <Row start="xs">
+                <Col xs={6} className="signinRight">
+                  <hr className="vertical"/>
+                  <a className="auth-twitter" href="https://dribbble.com/auth/Twitter"> Sign in with Twitter</a>
+                  <p className="blw-twitter">
+                    One-click sign in to Dribbble if your account is
+                    connected to Twitter. We’ll walk you through
+                    connecting it if it isn’t.
+                  </p>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
         </div>
       </Grid>
     );

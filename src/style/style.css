@@ -1,18 +1,11 @@
-div.loginContainer {
-  position: fixed;
-  top: 0px;
-}
-
 div.errorContainer {
 
 }
 
 div.signinTitle {
   color: #999;
-  /*top: 110px;
-  left:47%;
-  position: fixed;*/
   font-size: 22pt;
+  padding-top: 1%;
 }
 
 div.error {
@@ -38,13 +31,16 @@ h2.notice {
 }
 
 p.blw-twitter {
-  position: fixed;
-  left: 52%;
-  top: 220px;
-  margin: 1.5em 0 0 0;
+  margin: 0 0 0 0;
   font-size: 0.8em;
   line-height: 1.5;
   color: #999;
+  min-width: 300px;
+}
+
+div.signinRight {
+  top: 2em;
+  left: 1.3em;
 }
 
 a.auth-twitter {
@@ -60,17 +56,12 @@ a.auth-twitter {
     background-size: 20px 16px, auto auto;
     background-color: #1d88b4;
     border-radius: 4px;
-    position: fixed;
-    left: 52%;
-    top: 185px;
 }
 
 img.signin {
   width: 200px;
   height: 49px;
-  /*position: fixed;
-  left: 580px;*/
-  top: 59px;
+  margin-top: 5%;
 }
 
 hr.vertical
@@ -82,8 +73,8 @@ hr.vertical
   background-color: #555;
   height: 0.5px;
   position: fixed;
-  top: 240px;
-  left: 594px;
+  top: 15em;
+  left: 43.5%;
 }
 
 div.signinup {
@@ -96,9 +87,10 @@ div.signinup {
 
 form.signin {
   position: absolute;
-  top: 160px;
-  left: 380px;
-  width: 500px;
+  top: 25%;
+  left: 28%;
+  max-width: 500px;
+  min-width: 150px;
 }
 
 button.signin {
@@ -117,7 +109,7 @@ label.signin {
   color: #cccccc;
   font-size: 11pt;
   margin: 0px;
-  padding: 0px 0px 0px 0px;
+  margin-right: 56%;
 }
 
 p.signin {
@@ -125,7 +117,14 @@ p.signin {
   text-decoration: underline;
   display: inline-block;
   margin: 0px;
-  padding: 0px 0px 0px 0px;
+  margin-right: 26%;
+}
+
+p.signinForgot {
+  color: #999;
+  text-decoration: underline;
+  display: inline-block;
+  margin: 0px;
 }
 
 nav {
