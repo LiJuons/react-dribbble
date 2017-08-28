@@ -44,9 +44,9 @@ class Signin extends Component {
             <Col xs={6} className="signinTitle">Sign In</Col>
           </Row>
           <Row>
-            <Col xs={6}>
+            <Col xs={12} sm={6} md={6} lg={6}>
               <Row end="xs">
-                <Col xs={7}>
+                <Col xs={12} sm={6} md={9} lg={7}>
                   <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                     <fieldset className="form-group">
                       <label className="signin">Username or Email</label>
@@ -59,14 +59,14 @@ class Signin extends Component {
                       {password.touched && password.error && <div className="error">{password.error}</div>}
                     </fieldset>
                     <button action="submit" className="signin">Sign in</button>
-                    <div className="center-block signinup">Not a member? <Link to="/signup"><p className="signin">Sign Up Now</p></Link></div>
+
                   </form>
                 </Col>
               </Row>
             </Col>
-            <Col xs={6}>
+            <Col xs={12} sm={6} md={6} lg={6}>
               <Row start="xs">
-                <Col xs={6} className="signinRight">
+                <Col xs={12} sm={6} md={6} lg={6} className="signinRight">
                   <hr className="vertical"/>
                   <a className="auth-twitter" href="https://dribbble.com/auth/Twitter"> Sign in with Twitter</a>
                   <p className="blw-twitter">
@@ -76,6 +76,11 @@ class Signin extends Component {
                   </p>
                 </Col>
               </Row>
+            </Col>
+          </Row>
+          <Row center="lg">
+            <Col xs={12} md={4} lg={4} className="signinup">
+                Not a member? <Link to="/signup"><p className="signin">Sign Up Now</p></Link>
             </Col>
           </Row>
         </div>

@@ -78,10 +78,6 @@ hr.vertical
 }
 
 div.signinup {
-  display: block;
-  position: relative;
-  left: 190px;
-  top: 20px;
   color: #999;
 }
 
@@ -110,6 +106,7 @@ label.signin {
   font-size: 11pt;
   margin: 0px;
   margin-right: 56%;
+  min-width: 150px;
 }
 
 p.signin {
