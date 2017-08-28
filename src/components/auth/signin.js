@@ -33,9 +33,7 @@ class Signin extends Component {
 
     return (
       <Grid>
-        <div className="errorContainer">
-          {this.renderAlert()}
-        </div>
+        {this.renderAlert()}
         <div className="container-fluid">
           <Link to="/">
             <img alt="Dribbble" className="center-block signin" src="https://cdn.dribbble.com/assets/signin/logo-hd-8360fbb4811d72778c637954850f3c3f0edc188a0b5e1db7041d2f4bb194dd49.png" />
@@ -45,16 +43,24 @@ class Signin extends Component {
           </Row>
           <Row>
             <Col xs={12} sm={6} md={6} lg={6}>
-              <Row end="xs">
-                <Col xs={12} sm={6} md={9} lg={7}>
+              <Row end="xs sm md lg">
+                <Col xs={12} sm={12} md={9} lg={7}>
                   <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                     <fieldset className="form-group">
-                      <label className="signin">Username or Email</label>
+                      <Row start="xs">
+                        <Col>
+                          <label className="signin">Username or Email</label>
+                        </Col>
+                      </Row>
                       <input  {...email} className="form-control auth"/ >
                       {email.touched && email.error && <div className="error">{email.error}</div>}
                     </fieldset>
                     <fieldset className="form-group">
-                      <label className="signin">Password <Link to='/forgot'><p className="signinForgot">Forgot?</p></Link></label>
+                      <Row start="xs">
+                        <Col>
+                          <label className="signin">Password <Link to='/forgot'><p className="signinForgot">Forgot?</p></Link></label>
+                        </Col>
+                      </Row>
                       <input type="password" {...password} className="form-control auth"/ >
                       {password.touched && password.error && <div className="error">{password.error}</div>}
                     </fieldset>
@@ -65,9 +71,8 @@ class Signin extends Component {
               </Row>
             </Col>
             <Col xs={12} sm={6} md={6} lg={6}>
-              <Row start="xs">
+              <Row start="xs sm md lg">
                 <Col xs={12} sm={6} md={6} lg={6} className="signinRight">
-                  <hr className="vertical"/>
                   <a className="auth-twitter" href="https://dribbble.com/auth/Twitter"> Sign in with Twitter</a>
                   <p className="blw-twitter">
                     One-click sign in to Dribbble if your account is
@@ -78,8 +83,13 @@ class Signin extends Component {
               </Row>
             </Col>
           </Row>
-          <Row center="lg">
-            <Col xs={12} md={4} lg={4} className="signinup">
+          <Row center="sm md lg">
+            <Col xs={4} sm={4} md={4} lg={4}>
+                <hr className="vertical"/>
+            </Col>
+          </Row>
+          <Row center="sm md lg">
+            <Col xs={12} sm={4} md={4} lg={4} className="signinup">
                 Not a member? <Link to="/signup"><p className="signin">Sign Up Now</p></Link>
             </Col>
           </Row>

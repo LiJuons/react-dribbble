@@ -1,5 +1,5 @@
 div.errorContainer {
-
+  flex: 1;
 }
 
 div.signinTitle {
@@ -10,6 +10,7 @@ div.signinTitle {
 
 div.error {
   background-color: #f55;
+  min-width: 1000px;
 }
 
 div.notice {
@@ -19,6 +20,7 @@ div.notice {
   text-align: center;
   color: #fff;
   background: #f55;
+  min-width: 1000px;
 }
 
 h2.notice {
@@ -56,6 +58,7 @@ a.auth-twitter {
     background-size: 20px 16px, auto auto;
     background-color: #1d88b4;
     border-radius: 4px;
+    min-width: 215px;
 }
 
 img.signin {
@@ -67,22 +70,20 @@ img.signin {
 hr.vertical
 {
   transform: rotate(-90deg);
-  border: none;
-  width: 13%;
-  color: #999;
-  background-color: #555;
-  height: 0.5px;
-  position: fixed;
-  top: 15em;
-  left: 43.5%;
+  background: #666;
+  width: 180px;
+  height: 0.1px;
+  margin-top: -90px;
 }
 
 div.signinup {
   color: #999;
+  margin-left: 9%;
+  margin-top: 3%;
+  min-width: 300px;
 }
 
 form.signin {
-  position: absolute;
   top: 25%;
   left: 28%;
   max-width: 500px;
@@ -105,7 +106,7 @@ label.signin {
   color: #cccccc;
   font-size: 11pt;
   margin: 0px;
-  margin-right: 56%;
+  margin-left: 5%;
   min-width: 150px;
 }
 
