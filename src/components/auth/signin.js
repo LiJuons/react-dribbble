@@ -3,12 +3,14 @@ import { reduxForm } from 'redux-form';
 import { Link } from 'react-router';
 import * as actions from '../../actions';
 import {Grid, Row, Col} from 'react-flexbox-grid';
+import Dimensions from 'react-dimensions';
 
 class Signin extends Component {
   componentWillMount() {
     document.body.style.backgroundColor = "#333333";
     this.props.clearError();
     this.props.headerOff();
+    this.props.classChange();
   }
 
   componentWillUnmount() {
@@ -30,6 +32,14 @@ class Signin extends Component {
 
   render() {
     const { handleSubmit, fields: { email, password }} = this.props;
+
+    console.log(window.innerWidth);
+    console.log(eval(`eval("window.innerWidth && window.innerHeight")`));
+    eval(`eval("window.innerWidth && window.innerHeight")`);
+    let w = window.innerWidth;
+    let h = window.innerHeight;
+    console.log(w, h, this.state.classN);
+
 
     return (
       <Grid>
@@ -74,7 +84,7 @@ class Signin extends Component {
               <Row start="xs sm md lg">
                 <Col xs={12} sm={6} md={6} lg={6} className="signinRight">
                   <a className="auth-twitter" href="https://dribbble.com/auth/Twitter"> Sign in with Twitter</a>
-                  <p className="blw-twitter">
+                  <p className={"blw-twitter" + {this.state.classN}}>
                     One-click sign in to Dribbble if your account is
                     connected to Twitter. We’ll walk you through
                     connecting it if it isn’t.

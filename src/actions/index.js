@@ -6,7 +6,8 @@ import {
   AUTH_ERROR,
   ERR_CLR,
   HDR_OFF,
-  HDR_ON
+  HDR_ON,
+  CLASS_CHNG
 } from './types';
 
 const ROOT_URL = 'https://dribbble-server-dev.herokuapp.com';
@@ -64,4 +65,8 @@ export function headerOff() {
 
 export function headerOn() {
   return { type: HDR_ON };
+}
+
+export function classChange() {
+  return { type: CLASS_CHNG };
 }
