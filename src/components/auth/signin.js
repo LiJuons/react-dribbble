@@ -3,14 +3,15 @@ import { reduxForm } from 'redux-form';
 import { Link } from 'react-router';
 import * as actions from '../../actions';
 import {Grid, Row, Col} from 'react-flexbox-grid';
-import Dimensions from 'react-dimensions';
 
 class Signin extends Component {
+
   componentWillMount() {
     document.body.style.backgroundColor = "#333333";
     this.props.clearError();
     this.props.headerOff();
-    this.props.classChange();
+    if (window.innerWidth<400)
+      this.props.classChange();
   }
 
   componentWillUnmount() {
@@ -32,13 +33,19 @@ class Signin extends Component {
 
   render() {
     const { handleSubmit, fields: { email, password }} = this.props;
+    let newClass = '';
+    let superClass = '';
+    let superButton = '';
 
-    console.log(window.innerWidth);
-    console.log(eval(`eval("window.innerWidth && window.innerHeight")`));
-    eval(`eval("window.innerWidth && window.innerHeight")`);
-    let w = window.innerWidth;
-    let h = window.innerHeight;
-    console.log(w, h, this.state.classN);
+    if (this.props.classN)
+      newClass = this.props.classN;
+
+    if (window.innerWidth<400) {
+      superClass = 'superClass';
+      superButton = 'superButton';
+    }
+
+    console.log(window.innerWidth, window.innerHeight, newClass);
 
 
     return (
@@ -62,7 +69,7 @@ class Signin extends Component {
                           <label className="signin">Username or Email</label>
                         </Col>
                       </Row>
-                      <input  {...email} className="form-control auth"/ >
+                      <input  {...email} className={"form-control auth " + superClass}/ >
                       {email.touched && email.error && <div className="error">{email.error}</div>}
                     </fieldset>
                     <fieldset className="form-group">
@@ -71,10 +78,10 @@ class Signin extends Component {
                           <label className="signin">Password <Link to='/forgot'><p className="signinForgot">Forgot?</p></Link></label>
                         </Col>
                       </Row>
-                      <input type="password" {...password} className="form-control auth"/ >
+                      <input type="password" {...password} className={"form-control auth " + superClass}/ >
                       {password.touched && password.error && <div className="error">{password.error}</div>}
                     </fieldset>
-                    <button action="submit" className="signin">Sign in</button>
+                    <button action="submit" className={"signin " + superButton}>Sign in</button>
 
                   </form>
                 </Col>
@@ -83,8 +90,8 @@ class Signin extends Component {
             <Col xs={12} sm={6} md={6} lg={6}>
               <Row start="xs sm md lg">
                 <Col xs={12} sm={6} md={6} lg={6} className="signinRight">
-                  <a className="auth-twitter" href="https://dribbble.com/auth/Twitter"> Sign in with Twitter</a>
-                  <p className={"blw-twitter" + {this.state.classN}}>
+                  <a className={"auth-twitter " + superButton} href="https://dribbble.com/auth/Twitter"> Sign in with Twitter</a>
+                  <p className={"blw-twitter " + newClass}>
                     One-click sign in to Dribbble if your account is
                     connected to Twitter. We’ll walk you through
                     connecting it if it isn’t.
@@ -124,7 +131,10 @@ function validate(formProps) {
 }
 
 function mapStateToProps(state) {
-  return { errorMessage: state.auth.error };
+  return {
+    errorMessage: state.auth.error,
+    classN: state.ccg.classN
+  };
 }
 
 export default reduxForm({

@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 class Header2 extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="containerNav">
         <a href="#home">Home</a>
         <a href="#news">News</a>
         <div className="dropdown">
