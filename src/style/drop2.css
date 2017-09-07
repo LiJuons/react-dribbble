@@ -1,14 +1,11 @@
-p.smallReso {
-  color: red;
-}
 
-.containerNav {
+div.containerNav {
     overflow: hidden;
     background-color: #333;
     font-family: Arial;
 }
 
-.containerNav a {
+div.containerNav a {
     float: left;
     font-size: 16px;
     color: white;
@@ -17,12 +14,12 @@ p.smallReso {
     text-decoration: none;
 }
 
-.dropdown {
+div.dropdownNav {
     float: left;
     overflow: hidden;
 }
 
-.dropdown .dropbtn {
+div.dropdownNav button.dropbtnNav {
     font-size: 16px;
     border: none;
     outline: none;
@@ -31,11 +28,11 @@ p.smallReso {
     background-color: inherit;
 }
 
-.containerNav a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+div.containerNav a:hover, div.dropdownNav:hover button.dropbtnNav {
+    color: #999;
 }
 
-.dropdown-content {
+div.dropdown-contentNav {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -44,7 +41,7 @@ p.smallReso {
     z-index: 1;
 }
 
-.dropdown-content a {
+div.dropdown-contentNav a {
     float: none;
     color: black;
     padding: 12px 16px;
@@ -53,10 +50,14 @@ p.smallReso {
     text-align: left;
 }
 
-.dropdown-content a:hover {
+div.dropdown-contentNav a:hover {
     background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+p.parNav:hover {
+  color: #F5F5F5;
+}
+
+div.dropdownNav:hover div.dropdown-contentNav {
     display: block;
 }

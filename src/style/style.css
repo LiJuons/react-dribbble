@@ -217,7 +217,9 @@ ul.style_l: {
   position: 'relative';
 }
 
-img.logo: {
+img.logo {
   top: 20px;
-  position: 'relative',
+  position: 'relative';
+  width: 100px;
+  height: 42px;
 }
