@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Header from './header2';
+import Header from './header';
 
 class App extends Component {
   componentWillMount() {
@@ -11,7 +11,7 @@ class App extends Component {
   componentDidMount() {
     document.body.style.backgroundColor = null;
   }
-  
+
   render() {
     console.log(this.props.header);
     if (this.props.header) {

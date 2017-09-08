@@ -1,67 +1,123 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import DropDown from './nav/dropDown'
 
-class Header extends Component {
-
-  onEnter () {
-    styles.style_link = {
-      color: '#F5F5F5',
-      fontSize: 15,
-    }
-  }
-
-  onLeave () {
-    styles.style_link = {
-      color: '#999',
-      fontSize: 15,
-    }
-  }
-
-  renderLinks() {
-    if (this.props.authenticated){
-      return <li className="nav-item">
-          <Link className="nav-link" to="/signout"><p style={styles.style_link}>Sign Out</p></Link>
-        </li>
-    } else {
-      return [
-        <li className="nav-item" key={1}>
-          <Link className="nav-link" to="/signin"><p style={styles.style_link} onMouseEnter={ this.onEnter } onMouseLeave = { this.onLeave }>Sign In</p></Link>
-        </li>,
-        <li className="nav-item" key={2}>
-          <Link className="nav-link" to="/signup"><p style={styles.style_link}>Sign Up</p></Link>
-        </li>
-      ];
-    }
-  }
-
+class Header2 extends Component {
   render() {
-    const links = ['Shots', 'Designers', 'Blog', 'Podcast', 'Meetups', 'Jobs', '...'];
-    const listItems = links.map((link_name) =>
-      <li className="nav-item" key={link_name} style={{ position: 'relative' }}>
-        <div className="nav-link" style={{ position: 'relative' }}><DropDown style={{ position: 'relative' }} name={link_name} /></div>
-      </li>
-    );
     return (
-      <nav style={{ backgroundColor: '#333333' }}>
+      <div className="containerNav">
         <div>
-          <div className="container-fluid">
-            <Link to="/" className="navbar-brand">
-              <img alt="dribbble" style={styles.logo} className="logo" src={"../pics/dribbble_logo.png"} />
-            </Link>
-          <ul className="nav navbar-nav style_l" style={styles.style_l}>
-            {listItems}
-          </ul>
+
+          <Link to="/" className="navbar-brand">
+            <img alt="dribbble" className="logo" src={"../pics/dribbble_logo.png"} />
+          </Link>
+
+          <div className="dropdownNav">
+            <button className="dropbtnNav"><Link to='/ok'><p className="navParLeft">Shots</p></Link></button>
+            <div className="dropdown-contentNav">
+              <Link to='#'>Popular</Link>
+              <Link to='#'>Recent</Link>
+              <Link to='#'>Debuts</Link>
+              <Link to='#'>Teams</Link>
+              <Link to='#'>Playoffs</Link>
+              <hr className="dropHr"/>
+              <Link to='#'>Highlights</Link>
+              <Link to='#'>Projects</Link>
+              <Link to='#'>Goods by Designers</Link>
+            </div>
+          </div>
+
+          <div className="dropdownNav">
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft">Designers</p></Link></button>
+            <div className="dropdown-contentNav">
+              <Link to='#'>Designers only</Link>
+              <Link to='#'>Design Teams only</Link>
+              <hr className="dropHr"/>
+              <Link to='#'>Add Your Design Team</Link>
+            </div>
+          </div>
+
+          <div className="dropdownNav">
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft">Blog</p></Link></button>
+            <div className="dropdown-contentNav">
+              <Link to='#'>Latest Stories</Link>
+              <hr className="dropHr"/>
+              <Link to='#'>Shot Block: Back to School</Link>
+              <Link to='#'>Timeout: Piotr Rybacki</Link>
+              <Link to='#'>Weekly Replay: Aug 28</Link>
+            </div>
+          </div>
+
+          <div className="dropdownNav">
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft">Podcast</p></Link></button>
+            <div className="dropdown-contentNav">
+              <Link to='#'>Latest Episodes</Link>
+              <hr className="dropHr"/>
+              <Link to='#'>Episode 20: Alice Lee</Link>
+              <Link to='#'>Episode 19: Ryan Putnam</Link>
+              <Link to='#'>Episode 18: Jared Erondu</Link>
+              <hr className="dropHr"/>
+              <Link to='#'>Listen in iTunes</Link>
+            </div>
+          </div>
+
+          <div className="dropdownNav">
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft">Meetups</p></Link></button>
+            <div className="dropdown-contentNav">
+              <Link to='#'>Dribbble Meetups</Link>
+              <hr className="dropHr"/>
+              <Link to='#'>Host a Meetup</Link>
+            </div>
+          </div>
+
+          <div className="dropdownNav">
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft">Jobs</p></Link></button>
+            <div className="dropdown-contentNav">
+              <Link to='#'>All</Link>
+              <Link to='#'>Remote / Anywhere</Link>
+              <Link to='#'>Teams Hiring</Link>
+              <hr className="dropHr"/>
+              <Link to='#'>Post a Job</Link>
+            </div>
+          </div>
+
+          <div className="dropdownNav">
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft">Hiring</p></Link></button>
+            <div className="dropdown-contentNav">
+              <Link to='#'>Hiring at Dribbble</Link>
+              <hr className="dropHr"/>
+              <Link to='#'>Post a Job</Link>
+              <Link to='#'>Scout Designers</Link>
+              <Link to='#'>Add Your Desing Team</Link>
+              <Link to='#'>Post a Project on Crew</Link>
+            </div>
+          </div>
+
+          <div className="dropdownNav">
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft"><span className="triDot">More</span></p></Link></button>
+            <div className="dropdown-contentNav">
+              <Link to='#'>About</Link>
+              <Link to='#'>Shop</Link>
+              <Link to='#'>Support</Link>
+              <hr className="dropHr"/>
+              <Link to='#'>Places</Link>
+              <hr className="dropHr"/>
+              <Link to='#'>Buckets</Link>
+              <Link to='#'>Colors</Link>
+              <hr className="dropHr"/>
+              <Link to='#'>Integrations</Link>
+            </div>
+          </div>
+
         </div>
-          <ul className="nav navbar-nav style_r" style={styles.style_r}>
-            {this.renderLinks()}
-            <li className="nav-item" key={10}>
-              <input className="search" type="search" ref="city" placeholder="Search"/>
-            </li>
-          </ul>
+
+        <div className="navRightDiv">
+          <Link to="/signup"><p className="navParRight">Sign Up</p></Link>
+          <Link to="/signin"><p className="navParRight">Sign In</p></Link>
+          <input className="search" type="search" ref="city" placeholder="Search"/>
         </div>
-      </nav>
+
+      </div>
     );
   }
 }
@@ -72,29 +128,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Header);
-
-const styles = {
-  style_r: {
-    top: 10,
-    right: 20,
-    bottom: 20,
-    left: 'auto',
-    position: 'fixed',
-  },
-  style_link: {
-    color: '#999',
-    fontSize: 15,
-  },
-  style_l: {
-    top: 10,
-    bottom: 20,
-    position: 'relative',
-  },
-  logo: {
-    position: 'relative',
-    top: 5,
-    width: 100,
-    height: 42,
-  }
-};
+export default connect(mapStateToProps)(Header2);
