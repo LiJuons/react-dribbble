@@ -4,6 +4,15 @@ import { Link } from 'react-router';
 
 class Header2 extends Component {
   render() {
+    let newClass = '';
+    let inputResize = '';
+    console.log(window.innerWidth);
+    if (window.innerWidth<960) //pranyksta viskas, lieka tik sign in link bei meniu mygtukas desinej
+      inputResize = 'inputResize';
+    else if (window.innerWidth<1050) //turi sumazeti input field
+      newClass = '';
+
+
     return (
       <div className="containerNav">
         <div>
@@ -114,7 +123,7 @@ class Header2 extends Component {
         <div className="navRightDiv">
           <Link to="/signup"><p className="navParRight">Sign Up</p></Link>
           <Link to="/signin"><p className="navParRight">Sign In</p></Link>
-          <input className="search" type="search" ref="city" placeholder="Search"/>
+          <input className={"search " + inputResize} type="search" ref="city" placeholder="Search"/>
         </div>
 
       </div>
