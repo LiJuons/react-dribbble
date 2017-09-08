@@ -13,107 +13,107 @@ class Header2 extends Component {
           </Link>
 
           <div className="dropdownNav">
-            <button className="dropbtnNav"><a href="/shots" className="navlinkA">Shots</a></button>
+            <button className="dropbtnNav"><Link to='/ok'><p className="navParLeft">Shots</p></Link></button>
             <div className="dropdown-contentNav">
-              <a href="#" className="dropLinkA">Popular</a>
-              <a href="#">Recent</a>
-              <a href="#">Debuts</a>
-              <a href="#">Teams</a>
-              <a href="#">Playoffs</a>
+              <Link to='#'>Popular</Link>
+              <Link to='#'>Recent</Link>
+              <Link to='#'>Debuts</Link>
+              <Link to='#'>Teams</Link>
+              <Link to='#'>Playoffs</Link>
               <hr className="dropHr"/>
-              <a href="#">Highlights</a>
-              <a href="#">Projects</a>
-              <a href="#">Goods by Designers</a>
+              <Link to='#'>Highlights</Link>
+              <Link to='#'>Projects</Link>
+              <Link to='#'>Goods by Designers</Link>
             </div>
           </div>
 
           <div className="dropdownNav">
-            <button className="dropbtnNav"><a href="/shots" className="navlinkA">Designers</a></button>
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft">Designers</p></Link></button>
             <div className="dropdown-contentNav">
-              <a href="#">Designers only</a>
-              <a href="#">Design Teams only</a>
+              <Link to='#'>Designers only</Link>
+              <Link to='#'>Design Teams only</Link>
               <hr className="dropHr"/>
-              <a href="#">Add Your Design Team</a>
+              <Link to='#'>Add Your Design Team</Link>
             </div>
           </div>
 
           <div className="dropdownNav">
-            <button className="dropbtnNav"><a href="/shots" className="navlinkA">Blog</a></button>
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft">Blog</p></Link></button>
             <div className="dropdown-contentNav">
-              <a href="#">Latest Stories</a>
+              <Link to='#'>Latest Stories</Link>
               <hr className="dropHr"/>
-              <a href="#">Shot Block: Back to School</a>
-              <a href="#">Timeout: Piotr Rybacki</a>
-              <a href="#">Weekly Replay: Aug 28</a>
+              <Link to='#'>Shot Block: Back to School</Link>
+              <Link to='#'>Timeout: Piotr Rybacki</Link>
+              <Link to='#'>Weekly Replay: Aug 28</Link>
             </div>
           </div>
 
           <div className="dropdownNav">
-            <button className="dropbtnNav"><a href="/shots" className="navlinkA">Podcast</a></button>
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft">Podcast</p></Link></button>
             <div className="dropdown-contentNav">
-              <a href="#">Latest Episodes</a>
+              <Link to='#'>Latest Episodes</Link>
               <hr className="dropHr"/>
-              <a href="#">Episode 20: Alice Lee</a>
-              <a href="#">Episode 19: Ryan Putnam</a>
-              <a href="#">Episode 18: Jared Erondu</a>
+              <Link to='#'>Episode 20: Alice Lee</Link>
+              <Link to='#'>Episode 19: Ryan Putnam</Link>
+              <Link to='#'>Episode 18: Jared Erondu</Link>
               <hr className="dropHr"/>
-              <a href="#">Listen in iTunes</a>
+              <Link to='#'>Listen in iTunes</Link>
             </div>
           </div>
 
           <div className="dropdownNav">
-            <button className="dropbtnNav"><a href="/shots" className="navlinkA">Meetups</a></button>
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft">Meetups</p></Link></button>
             <div className="dropdown-contentNav">
-              <a href="#">Dribbble Meetups</a>
+              <Link to='#'>Dribbble Meetups</Link>
               <hr className="dropHr"/>
-              <a href="#">Host a Meetup</a>
+              <Link to='#'>Host a Meetup</Link>
             </div>
           </div>
 
           <div className="dropdownNav">
-            <button className="dropbtnNav"><a href="/shots" className="navlinkA">Jobs</a></button>
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft">Jobs</p></Link></button>
             <div className="dropdown-contentNav">
-              <a href="#">All</a>
-              <a href="#">Remote / Anywhere</a>
-              <a href="#">Teams Hiring</a>
+              <Link to='#'>All</Link>
+              <Link to='#'>Remote / Anywhere</Link>
+              <Link to='#'>Teams Hiring</Link>
               <hr className="dropHr"/>
-              <a href="#">Post a Job</a>
+              <Link to='#'>Post a Job</Link>
             </div>
           </div>
 
           <div className="dropdownNav">
-            <button className="dropbtnNav"><a href="/shots" className="navlinkA">Hiring</a></button>
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft">Hiring</p></Link></button>
             <div className="dropdown-contentNav">
-              <a href="#">Hiring at Dribbble</a>
+              <Link to='#'>Hiring at Dribbble</Link>
               <hr className="dropHr"/>
-              <a href="#">Post a Job</a>
-              <a href="#">Scout Designers</a>
-              <a href="#">Add Your Desing Team</a>
-              <a href="#">Post a Project on Crew</a>
+              <Link to='#'>Post a Job</Link>
+              <Link to='#'>Scout Designers</Link>
+              <Link to='#'>Add Your Desing Team</Link>
+              <Link to='#'>Post a Project on Crew</Link>
             </div>
           </div>
 
           <div className="dropdownNav">
-            <button className="dropbtnNav"><a href="/shots" className="navlinkA"><span className="triDot">More</span></a></button>
+            <button className="dropbtnNav"><Link to='/shots'><p className="navParLeft"><span className="triDot">More</span></p></Link></button>
             <div className="dropdown-contentNav">
-              <a href="#">About</a>
-              <a href="#">Shop</a>
-              <a href="#">Support</a>
+              <Link to='#'>About</Link>
+              <Link to='#'>Shop</Link>
+              <Link to='#'>Support</Link>
               <hr className="dropHr"/>
-              <a href="#">Places</a>
+              <Link to='#'>Places</Link>
               <hr className="dropHr"/>
-              <a href="#">Buckets</a>
-              <a href="#">Colors</a>
+              <Link to='#'>Buckets</Link>
+              <Link to='#'>Colors</Link>
               <hr className="dropHr"/>
-              <a href="#">Integrations</a>
+              <Link to='#'>Integrations</Link>
             </div>
           </div>
 
         </div>
 
         <div className="navRightDiv">
-          <Link to="/signup"><p className="navPar">Sign Up</p></Link>
-          <Link to="/signin"><p className="navPar">Sign In</p></Link>
+          <Link to="/signup"><p className="navParRight">Sign Up</p></Link>
+          <Link to="/signin"><p className="navParRight">Sign In</p></Link>
           <input className="search" type="search" ref="city" placeholder="Search"/>
         </div>
 

@@ -11,7 +11,7 @@ class App extends Component {
   componentDidMount() {
     document.body.style.backgroundColor = null;
   }
-
+  
   render() {
     console.log(this.props.header);
     if (this.props.header) {

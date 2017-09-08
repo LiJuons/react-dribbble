@@ -1,8 +1,14 @@
+.navParLeft {
+  color: #999;
+  font-size: 14.5px;
+  margin: -10px -25px -10px -25px;
+}
+
 .navRightDiv {
   float: right;
 }
 
-.navPar {
+.navParRight {
   margin-top: 3px;
   margin-left: -10px;
   color: #999;

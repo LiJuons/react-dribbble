@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Grid, Row, Col} from 'react-flexbox-grid';
 
 export default class Ok extends Component {
-
     render() {
       return (
         <Grid>
