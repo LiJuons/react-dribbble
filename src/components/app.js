@@ -3,6 +3,15 @@ import { connect } from 'react-redux';
 import Header from './header2';
 
 class App extends Component {
+  componentWillMount() {
+    document.body.style.backgroundImage = "url('./../pics/horizon.jpg')";
+    document.body.style.backgroundSize = "1366px 638px";
+  }
+
+  componentDidMount() {
+    document.body.style.backgroundColor = null;
+  }
+
   render() {
     console.log(this.props.header);
     if (this.props.header) {

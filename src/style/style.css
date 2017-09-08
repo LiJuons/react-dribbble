@@ -161,23 +161,6 @@ input.auth:-webkit-autofill{
   -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
-input.search {
-  width: 220px;
-  height: 25px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border: none;
-  top: 5px;
-  position: relative;
-  font-size: 12px;
-  line-height: 1.5;
-  background-image: url("../pics/search.png");
-  background-position: 5px;
-  background-size: 15px 15px;
-  background-repeat: no-repeat;
-  text-indent: 24px;
-}
-
 input.search:not(:focus) {
   color: #adadad;
 }
@@ -211,15 +194,8 @@ p.sub_label {
   font-size: 15pt;
 }
 
-ul.style_l: {
-  top: 10px;
+ul.style_l {
+  top: 10%;
   bottom: 20px;
-  position: 'relative';
-}
-
-img.logo {
-  top: 20px;
-  position: 'relative';
-  width: 100px;
-  height: 42px;
+  color: #999;
 }
