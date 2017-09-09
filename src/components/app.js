@@ -5,7 +5,7 @@ import Header from './header';
 class App extends Component {
   componentWillMount() {
     document.body.style.backgroundImage = "url('./../pics/horizon.jpg')";
-    document.body.style.backgroundSize = "1366px 638px";
+    document.body.style.backgroundSize = "1600px 700px";
   }
 
   componentDidMount() {

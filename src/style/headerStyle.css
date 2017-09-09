@@ -6,6 +6,10 @@
   padding-right: 5px;
 }
 
+.navParLeft:hover, .navParRight:hover{
+  color: #ddd;
+}
+
 .navRightDiv {
   float: right;
 }
@@ -22,11 +26,40 @@
   color: #ddd;
 }
 
+@media screen
+and (max-width: 1050px) input.search {
+  width: 120px;
+}
+
+@media screen
+and (max-width: 950px) {
+  .logoDiv{
+    position: relative;
+    left: 44%;
+    right: 56%;
+  }
+
+  .navLeftDiv {
+    display: none;
+  }
+
+  .navRightDiv {
+    display: none;
+  }
+
+  .logo {
+    left: 50%;
+    right: 50%;
+
+  }
+
+}
+
 input.inputResize {
   width: 150px;
 }
 
-input.search {
+.search {
   width: 220px;
   height: 25px;
   -moz-border-radius: 5px;
@@ -45,10 +78,9 @@ input.search {
   text-indent: 24px;
 }
 
-img.logo {
+.logo {
   margin-top: -8px;
   margin-right: -28px;
-  position: 'relative';
   width: 100px;
   height: 42px;
 }
