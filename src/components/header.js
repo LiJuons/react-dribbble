@@ -20,6 +20,27 @@ class Header2 extends Component {
           </Link>
           </div>
 
+          <div className="toggleNav">Toggle Menu</div>
+          <div className="toggleNav vertical-menu">
+              <input className="search2" type="text" placeholder="Search " value=""/>
+            <hr/>
+            <Link to='#'>Shots</Link>
+            <hr/>
+            <Link to='#'>Designers</Link>
+            <hr/>
+            <Link to='#'>Blog</Link>
+            <hr/>
+            <Link to='#'>Podcast</Link>
+            <hr/>
+            <Link to='#'>Meetups</Link>
+            <hr/>
+            <Link to='#'>Jobs</Link>
+            <hr/>
+            <Link to='#'>Hiring</Link>
+            <hr/>
+            <Link to='#'>More</Link>
+          </div>
+
           <div className="navLeftDiv">
             <div className="dropdownNav">
               <button className="dropbtnNav"><Link to='/ok'><p className="navParLeft">Shots</p></Link></button>
@@ -122,8 +143,8 @@ class Header2 extends Component {
         </div>
 
         <div className="navRightDiv">
-          <Link to="/signup"><p className="navParRight">Sign Up</p></Link>
-          <Link to="/signin"><p className="navParRight">Sign In</p></Link>
+          <Link to="/signup"><p className="navParRight hideSup">Sign Up</p></Link>
+          <Link to="/signin"><p className="navParRight showSign">Sign In</p></Link>
           <input className={"search " + searchClass} type="search" ref="city" placeholder="Search"/>
         </div>
 

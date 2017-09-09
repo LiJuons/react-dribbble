@@ -33,26 +33,125 @@ and (max-width: 1050px) input.search {
 
 @media screen
 and (max-width: 950px) {
+
   .logoDiv{
     position: relative;
-    left: 44%;
-    right: 56%;
+    left: 41.5%;
+    margin-top: -5px;
   }
 
   .navLeftDiv {
     display: none;
   }
 
-  .navRightDiv {
+  .hideSup {
     display: none;
+  }
+
+  .showSign {
+    position: absolute;
+    right: 2%;
+    top: 1.5%;
+    margin: 0;
+    padding: 0;
+    font-size: 95%;
+    vertical-align: baseline;
+    border: 0;
+    background: transparent;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .search2 {
+    width: 190px;
+    padding: 5px 5px 5px 25px;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    vertical-align: middle;
+    color: #bbb;
+    border: none;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 7px 50%;
+    background-image: url("../pics/search.png");
+    border-radius: 4px;
+
   }
 
   .logo {
     left: 50%;
     right: 50%;
+    margin-bottom: -16px;
+    padding: 0px 1px 0px 1px;
+  }
+
+  div.toggleNav {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    display: block;
+    width: 48px;
+    height: 40px;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: 15px 50%;
+    background-image: url("../pics/hamburger.png");
+    opacity: 0.5;
+  }
+
+  div.toggleNav:hover {
+    opacity: 1;
+  }
+
+  div.vertical-menu {
+    top: 40px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #333;
+    background-image: none;
+    opacity: 1;
+  }
+
+  div.vertical-menu a {
+      color: #999;
+      text-indent: 0;
+      width: 100%;
+      display: block;
+      margin: 0;
+      margin-right: 500px;
+      text-decoration: none;
+      text-align: left;
+      height: auto;
+      padding: 15px;
+      font-size: 14px;
+      line-height: 1;
+      border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .vertical-menu hr {
+      border-color: #ddd;
+      border-width: 1px;
+      border-style: inset;
+      display: none;
+  }
+
+  .vertical-menu a:hover{
 
   }
 
+  .vertical-menu a.active {
+      background-color: #4CAF50; /* Add a green color to the "active/current" link */
+      color: white;
+  }
+
+}
+
+.toggleNav {
+  display: none;
 }
 
 input.inputResize {
@@ -117,21 +216,21 @@ hr.dropHr {
   vertical-align: baseline;
 }
 
-div.containerNav {
+.containerNav {
     overflow: hidden;
     background-color: #333;
     font-family: Arial;
     max-height: 56px;
 }
 
-div.containerNav a {
+.containerNav a {
     float: left;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-div.dropdownNav {
+.dropdownNav {
     float: left;
     overflow: hidden;
 }
@@ -188,4 +287,8 @@ p.parNav:hover {
 
 div.dropdownNav:hover div.dropdown-contentNav {
     display: block;
+}
+
+.vertical-menu {
+  display: none;
 }
