@@ -36,8 +36,13 @@ and (max-width: 950px) {
 
   .logoDiv{
     position: relative;
-    left: 41.5%;
+    left: 40%;
     margin-top: -5px;
+  }
+
+  .logoDiv:hover {
+    border-width: 2px;
+    border-color: red;
   }
 
   .navLeftDiv {
@@ -64,11 +69,14 @@ and (max-width: 950px) {
     display: none;
   }
 
-  .search2 {
-    width: 190px;
-    padding: 5px 5px 5px 25px;
+  input.search2 {
+    display: block;
+    width: 90%;
+    padding: 10px 5px 10px 25px;
     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 5%;
     font-weight: normal;
     vertical-align: middle;
     color: #bbb;
@@ -78,14 +86,16 @@ and (max-width: 950px) {
     background-position: 7px 50%;
     background-image: url("../pics/search.png");
     border-radius: 4px;
+    background-position: 5px;
+    background-size: 15px 15px;
+    margin-bottom: 10px;
+
 
   }
 
   .logo {
-    left: 50%;
-    right: 50%;
     margin-bottom: -16px;
-    padding: 0px 1px 0px 1px;
+    padding: 0 1px 0 1px;
   }
 
   div.toggleNav {
@@ -110,7 +120,6 @@ and (max-width: 950px) {
     top: 40px;
     width: 100%;
     height: 100%;
-    display: block;
     background-color: #333;
     background-image: none;
     opacity: 1;
@@ -146,6 +155,19 @@ and (max-width: 950px) {
   .vertical-menu a.active {
       background-color: #4CAF50; /* Add a green color to the "active/current" link */
       color: white;
+  }
+
+  a.toggleMenu {
+    width: 48px;
+    height: 40px;
+  }
+
+  div.hideMenu {
+    display: none;
+  }
+
+  div.showMenu {
+    display: block;
   }
 
 }

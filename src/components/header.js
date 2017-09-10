@@ -2,9 +2,24 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
+let verticalMenu='';
+
 class Header2 extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+
   render() {
-    let newClass = '';
     let searchClass = '';
     console.log(window.innerWidth);
     if (window.innerWidth<1080)
@@ -15,30 +30,32 @@ class Header2 extends Component {
       <div className="containerNav">
         <div>
           <div className="logoDiv">
-          <Link to="/" className="navbar-brand">
+          <Link to="/" className="navbar-brand hoverlink">
             <img alt="dribbble" className="logo" src={"../pics/dribbble_logo.png"} />
           </Link>
           </div>
 
-          <div className="toggleNav">Toggle Menu</div>
-          <div className="toggleNav vertical-menu">
-              <input className="search2" type="text" placeholder="Search " value=""/>
-            <hr/>
-            <Link to='#'>Shots</Link>
-            <hr/>
-            <Link to='#'>Designers</Link>
-            <hr/>
-            <Link to='#'>Blog</Link>
-            <hr/>
-            <Link to='#'>Podcast</Link>
-            <hr/>
-            <Link to='#'>Meetups</Link>
-            <hr/>
-            <Link to='#'>Jobs</Link>
-            <hr/>
-            <Link to='#'>Hiring</Link>
-            <hr/>
-            <Link to='#'>More</Link>
+          <div className="toggleNav"><a href="#" className="toggleMenu" onClick={this.handleClick}/></div>
+          <div className={this.state.isToggleOn ? 'hideMenu' : 'showMenu'}>
+            <div className={"toggleNav vertical-menu"}>
+                <input className="search2" type="text" placeholder="Search " value=""/>
+              <hr/>
+              <Link to='#'>Shots</Link>
+              <hr/>
+              <Link to='#'>Designers</Link>
+              <hr/>
+              <Link to='#'>Blog</Link>
+              <hr/>
+              <Link to='#'>Podcast</Link>
+              <hr/>
+              <Link to='#'>Meetups</Link>
+              <hr/>
+              <Link to='#'>Jobs</Link>
+              <hr/>
+              <Link to='#'>Hiring</Link>
+              <hr/>
+              <Link to='#'>More</Link>
+            </div>
           </div>
 
           <div className="navLeftDiv">
