@@ -42,7 +42,7 @@ class Header2 extends Component {
           <div className="toggleNav"><a href="#" className="toggleMenu" onClick={this.toggleMenu}/></div>
 
           <div className={this.state.isToggleOn ? 'showMenu' : 'hideMenu'}>
-            <div className={"toggleNav vertical-menu "}>
+            <div className="toggleNav vertical-menu">
                 <input className="search2" type="text" placeholder="Search " />
               <Link to='#'>Shots</Link>
               <Link to='#'>Designers</Link>

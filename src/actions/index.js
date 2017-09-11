@@ -15,7 +15,7 @@ const ROOT_URL = 'https://dribbble-server-dev.herokuapp.com';
 export function signinUser({ email, password }) {
   return function(dispatch) {
     axios
-      .post(`${ROOT_URL}/login`, { email, password })
+      .post(`${ROOT_URL}/api/user/login`, { email, password })
       .then(response => {
 	dispatch({ type: AUTH_USER });
 	localStorage.setItem('token', response.data.token);
@@ -30,7 +30,7 @@ export function signinUser({ email, password }) {
 export function signupUser({ email, username, name, password }) {
   return function(dispatch) {
     axios
-      .post(`${ROOT_URL}/create`, { email, username, name, password })
+      .post(`${ROOT_URL}/api/user/create`, { email, username, name, password })
       .then(response => {
         dispatch({ type: AUTH_USER });
         localStorage.setItem('token', response.data.token);
