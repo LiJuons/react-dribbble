@@ -7,24 +7,28 @@ let verticalMenu='';
 class Header2 extends Component {
   constructor(props) {
     super(props);
-    this.state = {isToggleOn: true};
+    this.state = {isToggleOn: false};
+    this.state = {isMoreToggleOn: false};
 
-    // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
+    this.toggleMore = this.toggleMore.bind(this);
   }
 
-  handleClick() {
+  toggleMenu() {
     this.setState(prevState => ({
       isToggleOn: !prevState.isToggleOn
     }));
   }
 
-  render() {
-    let searchClass = '';
-    console.log(window.innerWidth);
-    if (window.innerWidth<1080)
-      searchClass = 'inputResize';
+  toggleMore() {
+    this.setState(prevState => ({
+      isMoreToggleOn: !prevState.isMoreToggleOn,
+      isToggleOn: !prevState.isToggleOn
+    }));
+    console.log(this.state.isMoreToggleOn ? 'showMore' : 'hideMore');
+  }
 
+  render() {
 
     return (
       <div className="containerNav">
@@ -35,26 +39,32 @@ class Header2 extends Component {
           </Link>
           </div>
 
-          <div className="toggleNav"><a href="#" className="toggleMenu" onClick={this.handleClick}/></div>
-          <div className={this.state.isToggleOn ? 'hideMenu' : 'showMenu'}>
-            <div className={"toggleNav vertical-menu"}>
-                <input className="search2" type="text" placeholder="Search " value=""/>
-              <hr/>
+          <div className="toggleNav"><a href="#" className="toggleMenu" onClick={this.toggleMenu}/></div>
+
+          <div className={this.state.isToggleOn ? 'showMenu' : 'hideMenu'}>
+            <div className={"toggleNav vertical-menu "}>
+                <input className="search2" type="text" placeholder="Search " />
               <Link to='#'>Shots</Link>
-              <hr/>
               <Link to='#'>Designers</Link>
-              <hr/>
               <Link to='#'>Blog</Link>
-              <hr/>
               <Link to='#'>Podcast</Link>
-              <hr/>
               <Link to='#'>Meetups</Link>
-              <hr/>
               <Link to='#'>Jobs</Link>
-              <hr/>
               <Link to='#'>Hiring</Link>
-              <hr/>
-              <Link to='#'>More</Link>
+              <Link to='#' className="moreArrow" onClick={this.toggleMore}>More</Link>
+            </div>
+          </div>
+
+          <div className={this.state.isMoreToggleOn ? 'showMore' : 'hideMore'}>
+            <div className="toggleNav moreMenu">
+              <Link to='#' onClick={this.toggleMore}><p className="moreLink">More</p></Link>
+              <Link to='#'>About</Link>
+              <Link to='#'>Shop</Link>
+              <Link to='#'>Support</Link>
+              <Link to='#' className="separate">Places</Link>
+              <Link to='#' className="separate">Buckets</Link>
+              <Link to='#'>Colors</Link>
+              <Link to='#' className="separate">Integrations</Link>
             </div>
           </div>
 
@@ -162,7 +172,7 @@ class Header2 extends Component {
         <div className="navRightDiv">
           <Link to="/signup"><p className="navParRight hideSup">Sign Up</p></Link>
           <Link to="/signin"><p className="navParRight showSign">Sign In</p></Link>
-          <input className={"search " + searchClass} type="search" ref="city" placeholder="Search"/>
+          <input className="search" type="search" ref="city" placeholder="Search"/>
         </div>
 
       </div>
