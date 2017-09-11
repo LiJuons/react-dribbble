@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 let verticalMenu='';
 
-class Header2 extends Component {
+class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {isToggleOn: false};
@@ -186,4 +186,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Header2);
+export default connect(mapStateToProps)(Header);

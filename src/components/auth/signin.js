@@ -15,7 +15,7 @@ class Signin extends Component {
   }
 
   componentWillUnmount() {
-    document.body.style.backgroundColor = null;
+    document.body.style.backgroundColor = "#252525";
     this.props.headerOn();
   }
 

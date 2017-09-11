@@ -1,5 +1,8 @@
-button.superButton {
-  width: 100%;
+@media screen
+and (max-width: 480px){
+  button.signin {
+    width: 100%;
+  }
 }
 
 input.auth {
@@ -89,8 +92,7 @@ img.signin {
   margin-top: 5%;
 }
 
-hr.vertical
-{
+hr.vertical {
   transform: rotate(-90deg);
   background: #666;
   width: 180px;
@@ -147,28 +149,8 @@ p.signinForgot {
   margin: 0px;
 }
 
-nav {
-  height: 56px;
-  position: relative;
-}
-
-nav ul li:hover > ul {
-    position: relative;
-    display: block;
-}
-
 input.auth:-webkit-autofill{
   -webkit-box-shadow: 0 0 0px 1000px white inset;
-}
-
-input.search:not(:focus) {
-  color: #adadad;
-}
-
-input.search::-webkit-input-placeholder {
-    color: #adadad;
-    font-size: 12px;
-    line-height: 3;
 }
 
 p.sub_label {
@@ -178,24 +160,4 @@ p.sub_label {
 
 .error {
   color: red;
-}
-
-.style_r: {
-  margin: 10px;
-  top: 0px;
-  right: 17px;
-  bottom: 20px;
-  left: 'auto';
-  position: 'relative';
-}
-
-.style-link: {
-  color: #F5F5F5;
-  font-size: 15pt;
-}
-
-ul.style_l {
-  top: 10%;
-  bottom: 20px;
-  color: #999;
 }

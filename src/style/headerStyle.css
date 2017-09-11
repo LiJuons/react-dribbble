@@ -78,6 +78,16 @@ and (max-width: 950px) {
     display: none;
   }
 
+  input.search:not(:focus) {
+    color: #adadad;
+  }
+
+  input.search::-webkit-input-placeholder {
+      color: #adadad;
+      font-size: 12px;
+      line-height: 3;
+  }
+
   input.search2 {
     display: block;
     line-height: 1;

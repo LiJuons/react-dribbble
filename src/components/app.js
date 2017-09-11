@@ -4,13 +4,14 @@ import Header from './header';
 
 class App extends Component {
   componentWillMount() {
-    document.body.style.backgroundImage = "url('./../pics/horizon.jpg')";
-    document.body.style.backgroundSize = "1600px 700px";
+    document.body.style.backgroundColor = "#252525"
+    // document.body.style.backgroundImage = "url('./../pics/horizon.jpg')";
+    // document.body.style.backgroundSize = "1600px 700px";
   }
-
-  componentDidMount() {
-    document.body.style.backgroundColor = null;
-  }
+  //
+  // componentDidMount() {
+  //   document.body.style.backgroundColor = null;
+  // }
 
   render() {
     console.log(this.props.header);
