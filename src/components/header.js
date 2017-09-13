@@ -18,6 +18,12 @@ class Header extends Component {
     this.setState(prevState => ({
       isToggleOn: !prevState.isToggleOn
     }));
+    if (this.state.isMoreToggleOn) {
+      this.setState(prevState => ({
+        isMoreToggleOn: false,
+        isToggleOn: false
+      }));
+    }
   }
 
   toggleMore() {

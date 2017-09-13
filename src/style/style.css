@@ -3,15 +3,15 @@ and (max-width: 480px){
   button.signin {
     width: 100%;
   }
+
+  input.auth {
+    width: 100%;
+  }
 }
 
 input.auth {
   width: 270px;
   background: #FFFFFF;
-}
-
-input.superClass {
-  width: 100%;
   box-sizing: border-box;
   border: none;
   font: 1.6em "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;

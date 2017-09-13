@@ -69,7 +69,7 @@ class Signin extends Component {
                           <label className="signin">Username or Email</label>
                         </Col>
                       </Row>
-                      <input  {...email} className={"form-control auth " + superClass}/ >
+                      <input  {...email} className="form-control auth"/ >
                       {email.touched && email.error && <div className="error">{email.error}</div>}
                     </fieldset>
                     <fieldset className="form-group">
@@ -78,7 +78,7 @@ class Signin extends Component {
                           <label className="signin">Password <Link to='/forgot'><p className="signinForgot">Forgot?</p></Link></label>
                         </Col>
                       </Row>
-                      <input type="password" {...password} className={"form-control auth " + superClass}/ >
+                      <input type="password" {...password} className="form-control auth"/ >
                       {password.touched && password.error && <div className="error">{password.error}</div>}
                     </fieldset>
                     <button action="submit" className={"signin " + superButton}>Sign in</button>
