@@ -4,12 +4,36 @@ and (max-width: 480px){
     width: 100%;
   }
 
-  input.auth {
+  input.form-control {
+    width: 100%; !important
+  }
+
+  a.auth-twitter {
+    margin: 10px -20px 5px -21px;
     width: 100%;
+    box-sizing: border-box;
+    padding: 15px 0 15px 0;
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 1;
+    font-weight: normal;
+  }
+
+  hr.vertical {
+    transform: rotate(0deg);
+    background: #666;
+    width: 330%;
+    height: 0.1px;
+    margin-top: -80px;
+    margin-bottom: 0;
   }
 }
 
-input.auth {
+.form-control >input {
+  width: 270px;
+}
+
+.auth {
   width: 270px;
   background: #FFFFFF;
   box-sizing: border-box;
@@ -70,9 +94,9 @@ div.signinRight {
   left: 1.3em;
 }
 
-a.auth-twitter {
+.auth-twitter {
     display: inline-block;
-    margin: 0 0 15px -21px;
+    margin: 0 0 15px 5px;
     padding: 6px 12px 6px 40px;
     font-size: 1.2em;
     font-weight: normal;
@@ -92,7 +116,7 @@ img.signin {
   margin-top: 5%;
 }
 
-hr.vertical {
+.vertical {
   transform: rotate(-90deg);
   background: #666;
   width: 180px;
