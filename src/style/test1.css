@@ -1,14 +1,36 @@
 @media screen
+and (max-width: 935px){
+  form.formStyle1 {
+
+  }
+}
+
+@media screen
+and (max-width: 845px){
+  .colStyle1 {
+    left: -45px;
+  }
+
+  hr.vertical1 {
+    margin-left: 150px;
+  }
+
+  input.auth1 {
+    left: 145px;
+  }
+
+  div.signinRight1 {
+    margin-left: 10px;
+  }
+}
+
+@media screen
 and (max-width: 480px){
-  button.signin {
+  button.signin1 {
     width: 100%;
   }
 
-  input.form-control {
-    width: 100%; !important
-  }
-
-  a.auth-twitter {
+  a.auth-twitter1 {
     margin: 10px -20px 5px -21px;
     width: 100%;
     box-sizing: border-box;
@@ -19,7 +41,7 @@ and (max-width: 480px){
     font-weight: normal;
   }
 
-  hr.vertical {
+  hr.vertical1 {
     transform: rotate(0deg);
     background: #666;
     width: 330%;
@@ -33,36 +55,37 @@ and (max-width: 480px){
   width: 270px;
 }
 
-.auth {
-  width: 270px;
-  background: #FFFFFF;
-  box-sizing: border-box;
+input.auth1 {
+  width: 250px;
   border: none;
-  font: 1.6em "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 2px 10px;
-  margin: 0px;
+  border-radius: 6px;
+  font: 18px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 8px 10px;
+  margin-right: 8px;
+  color: #444;
+  outline: none;
 }
 
-div.smallReso {
+div.smallReso1 {
   color: red;
 }
 
-div.errorContainer {
+div.errorContainer1 {
   flex: 1;
 }
 
-div.signinTitle {
+div.signinTitle1 {
   color: #999;
   font-size: 22pt;
   padding-top: 1%;
 }
 
-div.error {
+div.error1 {
   background-color: #f55;
   min-width: 1000px;
 }
 
-div.notice {
+div.notice1 {
   padding: 15px;
   font-size: .9em;
   font-weight: normal;
@@ -72,7 +95,7 @@ div.notice {
   min-width: 1000px;
 }
 
-h2.notice {
+h2.notice1 {
   max-width: 940px;
   margin: 0 auto;
   font-size: 1.3em;
@@ -81,7 +104,7 @@ h2.notice {
   text-align: center;
 }
 
-p.blw-twitter {
+p.blw-twitter1 {
   margin: 0 0 0 0;
   font-size: 0.8em;
   line-height: 1.5;
@@ -89,12 +112,11 @@ p.blw-twitter {
   min-width: 300px;
 }
 
-div.signinRight {
+.signinRight1 {
   top: 2em;
-  left: 1.3em;
 }
 
-.auth-twitter {
+.auth-twitter1 {
     display: inline-block;
     margin: 0 0 15px 5px;
     padding: 6px 12px 6px 40px;
@@ -110,13 +132,13 @@ div.signinRight {
     min-width: 215px;
 }
 
-img.signin {
+img.signin1 {
   width: 200px;
   height: 49px;
   margin-top: 5%;
 }
 
-.vertical {
+.vertical1 {
   transform: rotate(-90deg);
   background: #666;
   width: 180px;
@@ -124,14 +146,13 @@ img.signin {
   margin-top: -90px;
 }
 
-div.signinup {
+div.signinup1 {
   color: #999;
-  margin-left: 9%;
   margin-top: 3%;
   min-width: 300px;
 }
 
-form.signin {
+form.signin1 {
   top: 25%;
   left: 28%;
   max-width: 500px;
@@ -154,7 +175,6 @@ label.signin {
   color: #cccccc;
   font-size: 11pt;
   margin: 0px;
-  margin-left: 5%;
   min-width: 150px;
 }
 

@@ -59,10 +59,10 @@ class Signin extends Component {
             <Col xs={6} className="signinTitle">Sign In</Col>
           </Row>
           <Row>
-            <Col xs={12} sm={6} md={6} lg={6}>
+            <Col xs={8} sm={6} md={6} lg={6}>
               <Row end="xs sm md lg">
-                <Col xs={12} sm={12} md={9} lg={7}>
-                  <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+                <Col xs={12} sm={12} md={9} lg={7} className="colStyle">
+                  <form className="formStyle" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                     <fieldset className="form-group">
                       <Row start="xs">
                         <Col>
@@ -87,9 +87,9 @@ class Signin extends Component {
                 </Col>
               </Row>
             </Col>
-            <Col xs={12} sm={6} md={6} lg={6}>
+            <Col xs={1} sm={4} md={6} lg={6}>
               <Row start="xs sm md lg">
-                <Col xs={12} sm={6} md={6} lg={6} className="signinRight">
+                <Col xs={1} sm={8} md={6} lg={6} className="signinRight">
                   <a className={"auth-twitter " + superButton} href="https://dribbble.com/auth/Twitter"> Sign in with Twitter</a>
                   <p className={"blw-twitter " + newClass}>
                     One-click sign in to Dribbble if your account is
@@ -101,7 +101,7 @@ class Signin extends Component {
             </Col>
           </Row>
           <Row center="sm md lg">
-            <Col xs={4} sm={4} md={4} lg={4}>
+            <Col xs={4} sm={9} md={4} lg={4}>
                 <hr className="vertical"/>
             </Col>
           </Row>
