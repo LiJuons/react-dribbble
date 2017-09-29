@@ -49,7 +49,7 @@ class Signin extends Component {
 
 
     return (
-      <Grid style={{"margin-left":"250"}}>
+      <Grid style={{"margin-left":"20%"}}>
         {this.renderAlert()}
         <div className="container-fluid">
           <Link to="/">
@@ -102,7 +102,7 @@ class Signin extends Component {
           </Row>
           <Row center="sm md lg">
             <Col>
-                <hr className="vertical"/>
+                <hr className="vertical1"/>
             </Col>
           </Row>
           <Row center="sm md lg">
